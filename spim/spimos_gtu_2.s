@@ -69,7 +69,7 @@ finished:
     la $a0,prompt
     syscall
     #Exit
-    li $v0,22
+    li $v0,10
     syscall
 
 load_f1:
@@ -145,7 +145,6 @@ _handle_interrupt:
     bne $0,$s1,ready_queue_not_empty
     # Label to return after branch
 ready_queue_not_empty_return:
-    
     
     # Load the process id in $k1
     la $v0,25

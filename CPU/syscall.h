@@ -86,6 +86,7 @@ void print_table();
 void my_set_mem_word(mem_addr addr, reg_word value, process * p);
 reg_word my_read_mem_word(mem_addr addr,process * p);
 void process_exit();
+void init_kernel();
 
 #define PRINT_ON_SWITCH 0
 #define PROCESS_COUNT 100

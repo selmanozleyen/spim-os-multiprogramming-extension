@@ -1,0 +1,11331 @@
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input 7:7 11 17 26 13 20 10 5 Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input 7:7 11 17 26 13 20 10 Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input 7:7 11 17 Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input 7:7 11 17 26 13 20 10 5 8 4 2 1
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+8 4 2 1
+5 8 4 2 1
+26 13 20 10 5 8 4 2 1
+Input 7:7 11 17 26 13 20 10 5 8 4 2 Cur Pid : 5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+1
+
+Exitting Kernel...
+try 1
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+3
+
+Exitting Kernel...
+try 2
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+
+
+Exitting Kernel...
+try 3
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 4
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+
+
+Exitting Kernel...
+try 5
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=4
+Status[4]=3
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 6
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 7
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Cur Pid : 2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=4
+Status[4]=4
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 8
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+
+Exitting Kernel...
+Cur Pid : 0
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=4
+Status[5]=4
+Here in handler.
+try 9
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 10
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+
+Exitting Kernel...
+try 11
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 12
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 13
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+
+Exitting Kernel...
+try 14
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=4
+Rp[1]=5
+Rp[2]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 5
+Rp[0]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+
+Exitting Kernel...
+try 15
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 16
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+3
+
+Exitting Kernel...
+try 17
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 18
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 19
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=4
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=3
+Status[5]=4
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 20
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 21
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 22
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+Cur Pid : 0
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=4
+Status[5]=4
+Here in handler.
+try 23
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+3
+
+Exitting Kernel...
+try 24
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 25
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 26
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 27
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 28
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 29
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 30
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 31
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+
+Exitting Kernel...
+try 32
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+
+Exitting Kernel...
+try 33
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 34
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 35
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=4
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=3
+Status[5]=4
+Here in handler.
+3
+
+Exitting Kernel...
+try 36
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 37
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 38
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+
+Exitting Kernel...
+try 39
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+
+Exitting Kernel...
+try 40
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 41
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+Cur Pid : 0
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=4
+Status[5]=4
+Here in handler.
+
+Exitting Kernel...
+try 42
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+
+Exitting Kernel...
+try 43
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 44
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 45
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+Cur Pid : 5
+Rp[0]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 46
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 47
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=4
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=4
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 48
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 49
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 50
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+
+Exitting Kernel...
+try 51
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=4
+Status[4]=3
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+
+Exitting Kernel...
+try 52
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 53
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 54
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 55
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 56
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 57
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 58
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 59
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=4
+Status[5]=4
+Here in handler.
+
+Exitting Kernel...
+try 60
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=2
+Rp[1]=4
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=4
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 61
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 62
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+
+
+Exitting Kernel...
+try 63
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 64
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 65
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 66
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 67
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+
+Exitting Kernel...
+try 68
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 69
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 0
+Rp[0]=5
+Rp[1]=2
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 70
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 71
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+3
+Cur Pid : 0
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=4
+Status[5]=4
+Here in handler.
+
+Exitting Kernel...
+try 72
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+{7,1,3,24,5,6} The target:  24 is at position : 3
+{7,1,3,24,5,6} The target:  24 is at position : 3
+
+Exitting Kernel...
+try 73
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 74
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 0
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 75
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 76
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+5
+
+Exitting Kernel...
+try 77
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 0
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 78
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=4
+Status[4]=3
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 79
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 80
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5Cur Pid : 4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=1
+Status[5]=4
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+
+
+Exitting Kernel...
+try 81
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 0
+Rp[0]=4
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=3
+Status[5]=4
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 82
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 83
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 84
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+5
+
+Exitting Kernel...
+try 85
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 86
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 0
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 5
+Rp[0]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 87
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 0
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Status[0]=1
+Status[1]=4
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 5
+Rp[0]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=4
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 88
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 89
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Rp[2]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = Cur Pid : 5
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+5
+
+Exitting Kernel...
+try 90
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 91
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 0
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=4
+Status[5]=4
+Here in handler.
+
+Exitting Kernel...
+try 92
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 93
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 94
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+
+Exitting Kernel...
+try 95
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 0
+Rp[0]=4
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=3
+Status[5]=4
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 96
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 0
+Rp[0]=4
+Status[0]=1
+Status[1]=4
+Status[2]=4
+Status[3]=4
+Status[4]=3
+Status[5]=4
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 97
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=4
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 98
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 3
+Rp[0]=4
+Rp[1]=5
+Rp[2]=1
+Rp[3]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=1
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Rp[3]=3
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 99
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Cur Pid : 1
+Rp[0]=2
+Rp[1]=3
+Rp[2]=4
+Rp[3]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=1
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Rp[3]=1
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=1
+Rp[2]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=1
+Rp[1]=2
+Rp[2]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=3
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...
+try 100
+Loaded: /usr/share/spim/exceptions.s
+Cur Pid : 0
+Status[0]=0
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Status[0]=1
+Status[1]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Here in handler.
+in fork
+Cur Pid : 0
+Rp[0]=1
+Rp[1]=2
+Rp[2]=3
+Rp[3]=4
+Rp[4]=5
+Status[0]=1
+Status[1]=3
+Status[2]=3
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 2
+Rp[0]=3
+Rp[1]=4
+Rp[2]=5
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=1
+Status[3]=3
+Status[4]=3
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Cur Pid : 4
+Rp[0]=5
+Rp[1]=2
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=1
+Status[5]=3
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Cur Pid : 5
+Rp[0]=2
+Rp[1]=4
+Bp[0]=0
+Status[0]=2
+Status[1]=4
+Status[2]=3
+Status[3]=4
+Status[4]=3
+Status[5]=1
+Here in handler.
+Have set the interrupt PC.
+Interrupt happened, in kernel...
+In CS part
+In CS part
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+Input {1,2,3,4,5,6,7,8,9,10,11} x = 6
+ Output = 5
+
+Exitting Kernel...

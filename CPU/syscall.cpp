@@ -114,167 +114,31 @@ void windowsParameterHandlingControl(int flag )
 #endif
 
 
-int init = 1;
 int next_pid = 0;
 process * init_process = NULL;
-process *  processes[PROCESS_COUNT];
-int in_kernel = 0;
+/* 
+  The process table is actually in data segment these parts
+  contains the context about the procces.
+  Relation with other processes is not contained here
+  but it is stored in assembly.
+ */
+process *  processes[PROCESS_COUNT] = {NULL};
+
+/* names of the labels stored here */
+// name of the interrupt functions
 char * timer_interrupt_handler_name = "_handle_interrupt";
-// pointers to the assembly file
+char * ready_processes_lname = "ready_processes";
+char * blocked_processes_lname = "blocked_processes";
+char * process_states_lname = "process_states";
+char * bl_size_lname = "bl_size";
+char * rl_size_lname = "rl_size";
+/* pointers to the data segment of assembly file */
 int ready_processes_ptr = 0;
 int blocked_processes_ptr = 0;
 int process_state_ptr = 0;
-int kernel_regs_ptr= 0;
-int user_regs_ptr= 0;
 int handler_ptr = 0;
 int bl_size_ptr = 0;
 int rl_size_ptr = 0;
-
-imm_expr *
-my_copy_imm_expr (imm_expr *old_expr)
-{
-  imm_expr *expr = (imm_expr *) xmalloc (sizeof (imm_expr));
-
-  memcpy ((void*)expr, (void*)old_expr, sizeof (imm_expr));
-  return (expr);
-}
-
-instruction *
-my_copy_inst (instruction *inst)
-{
-  instruction *new_inst = (instruction *) xmalloc (sizeof (instruction));
-  if(inst)
-    *new_inst = *inst;
-  else
-    return inst;
-  /*memcpy ((void*)new_inst, (void*)inst , sizeof (instruction));*/
-  if(EXPR(inst))
-    SET_EXPR (new_inst, my_copy_imm_expr (EXPR (inst)));
-  return (new_inst);
-}
-
-
-process::process(const char * process_name){
-  
-  _parent = processes[R[K1_REG]];
-  _pid = next_pid++;
-  _process_name = std::string(process_name);
-  _pstate = READY;
-
-  for (int i = 0; i < 26; i++)
-    _R[i] = R[i];
-  for (int i = 28; i < R_LENGTH; i++)
-    _R[i] = R[i];
-  _HI = HI;
-  _LO = LO;
-  _PC = PC;
-  _nPC = nPC;
-
-  _FPR = FPR;
-  _FGR =  FGR; 
-  _FWR = FWR; 
-
-  for(int i = 0; i < 4 ; i++){
-    for(int j = 0;j < 32; j++){
-      _CCR[i][j] = CCR[i][j];
-      _CPR[i][j] =CPR[i][j];
-    }
-  }
-  int instruction_count = (text_top - TEXT_BOT )>> 2;
-  _text_seg = (instruction **) xmalloc(sizeof(instruction*)*instruction_count);
-  for (int i = 0; i < instruction_count; i++)
-    _text_seg[i] = my_copy_inst(text_seg[i]);
-  _text_top = text_top;
-  
-  _data_seg = (mem_word *) malloc (initial_data_size);
-  memcpy(_data_seg,data_seg,initial_data_size);
-  _data_seg_b = (BYTE_TYPE *) _data_seg;
-  _data_seg_h = (short *) _data_seg;
-  
-  _data_top = data_top;
-  
-  _stack_seg = (mem_word *) malloc (initial_stack_size);
-  memcpy(_stack_seg,stack_seg,initial_stack_size);
-  _stack_seg_b = (BYTE_TYPE *) _stack_seg;
-  _stack_seg_h = (short *) _stack_seg;
-  _stack_bot  = stack_bot;
-
-  _gp_midpoint = gp_midpoint;
-
-  _text_modified = true;
-  _data_modified = true;
-
-}
-  
-
-
-void process::store_process(){
-  for (int i = 0; i < 26; i++)
-    _R[i] = R[i];
-  for (int i = 28; i < R_LENGTH; i++)
-    _R[i] = R[i];
-  
- 
-
-  _HI = HI;
-  _LO = LO;
-  
-  _PC = PC;
-  _nPC = nPC;
-  
-  _FPR = FPR;
-  _FGR = FGR; 
-  _FWR = FWR; 
-
-
-  _text_seg = text_seg;
-  _text_top = text_top;
-  _data_seg = data_seg;
-  _data_seg_b = data_seg_b;
-  _data_seg_h = data_seg_h;
-  _data_top = data_top;
-  _stack_seg = stack_seg;
-  _stack_seg_b = stack_seg_b;
-  _stack_seg_h = stack_seg_h;
-  _stack_bot = stack_bot;
-  _gp_midpoint = gp_midpoint;
-  _text_modified = text_modified;
-  _data_modified = data_modified;
-
-}
-
-void process::load_process(){
-  for (int i = 0; i < 26; i++)
-    R[i] = _R[i];
-  for (int i = 28; i < R_LENGTH; i++)
-    R[i] = _R[i];
-  
-
-  HI = _HI;
-  LO = _LO;
-  
-  PC = _PC;
-  nPC = _nPC;
-  
-  FPR = _FPR;
-  FGR = _FGR; 
-  FWR = _FWR; 
-
-  text_seg = _text_seg;
-  text_top = _text_top;
-  data_seg = _data_seg;
-  data_seg_b = _data_seg_b;
-  data_seg_h = _data_seg_h;
-  data_top = _data_top;
-  stack_seg = _stack_seg;
-  stack_seg_b = _stack_seg_b;
-  stack_seg_h = _stack_seg_h;
-  stack_bot = _stack_bot;
-  gp_midpoint = _gp_midpoint;
-  text_modified = _text_modified;
-  data_modified = _data_modified;
-
-}
 
 /*You implement your handler here*/
 void SPIM_timerHandler()
@@ -365,21 +229,7 @@ do_syscall ()
     // It will initialize the process structure in the
     // Os emulator
     case INIT_PROCESS_STRUCTURE:
-      // create the process struct
-      init_process = new process("init");
-      processes[0] = init_process;
-      // Set parent to NULL since it has no parent
-      init_process->_parent = NULL;
-      // this will be the init process.
-      // setting the address of the assembly file
-      ready_processes_ptr = lookup_label("ready_processes")->addr;
-      blocked_processes_ptr = lookup_label("blocked_processes")->addr;
-      process_state_ptr = lookup_label("process_states")->addr;
-      // kernel_regs_ptr = lookup_label("kernel_regs")->addr;
-      // user_regs_ptr = lookup_label("user_regs")->addr;
-      handler_ptr = lookup_label(timer_interrupt_handler_name)->addr;
-      bl_size_ptr = lookup_label("bl_size")->addr;
-      rl_size_ptr = lookup_label("rl_size")->addr;
+      init_kernel();
       break;
     case PROCESS_EXIT_SYSCALL:
       process_exit();
@@ -484,15 +334,11 @@ do_syscall ()
 
     case EXIT_SYSCALL:
       spim_return_value = 0;
-      //cur_process->_pstate = TERMINATED;
-      //schedule(true);
-      return (1);
+      return (0);
 
     case EXIT2_SYSCALL:
-      //cur_process->_pstate = TERMINATED;
       spim_return_value = R[REG_A0];	/* value passed to spim's exit() call */
-      //schedule(true);
-      return (1);
+      return (0);
 
     case OPEN_SYSCALL:
       {
@@ -692,8 +538,9 @@ void spim_fork(){
     
 }
 
+// Will create a new memory segments and load the process there
 void spim_execv(char * path){
-  // set the name for process
+  // Setting the name for process below
   string temp = string(path);
   int last_index1,last_index2;
   last_index1  = temp.find_last_of('\\');
@@ -705,13 +552,10 @@ void spim_execv(char * path){
   process * cur_process = processes[R[K1_REG]];
   cur_process->_process_name = string(path+last_index1);
   // empty  current globals but before save the kernel registers
-  if(cur_process->_process_name.size() > 18){
-    fprintf(stdout,"%s\n",cur_process->_process_name);
-    fprintf(stdout,"There is a problem iwth registers.");
-    fflush(stdout);
-    _exit(-1);
-  }
+  int k0 = R[K0_REG];
   int k1 = R[K1_REG];
+
+  /* Series of functions to create new memory segment STARTS HERE*/
   empty_curr();
   make_memory (initial_text_size,
 	       initial_data_size, initial_data_limit,
@@ -724,9 +568,14 @@ void spim_execv(char * path){
   k_text_begins_at_point (K_TEXT_BOT);
   k_data_begins_at_point (K_DATA_BOT);
   data_begins_at_point (DATA_BOT);
-  char * p = strdup(temp.data());
-  read_assembly_file(p);
+    /* Series of functions to create new memory segment ENDS HERE*/
+  // store the kernel registers back
+  R[K0_REG] = k0;
   R[K1_REG] = k1;
+  // save the name of the process
+  char * p = strdup(temp.data());
+  // read the process from the file
+  read_assembly_file(p);
   // decrement the value because syscall will incement it
   PC = find_symbol_address("main")-BYTES_PER_WORD;
   // store it in the procces contents
@@ -841,8 +690,7 @@ void print_process(process * p){
 }
 
 
-void
-my_set_mem_word(mem_addr addr, reg_word value, process * p)
+void my_set_mem_word(mem_addr addr, reg_word value, process * p)
 {
   if ((addr >= DATA_BOT) && (addr < data_top) && !(addr & 0x3))
     p->_data_seg [(addr - DATA_BOT) >> 2] = (mem_word) value;
@@ -855,8 +703,7 @@ my_set_mem_word(mem_addr addr, reg_word value, process * p)
 }
 
 
-reg_word
-my_read_mem_word(mem_addr addr,process * p)
+reg_word my_read_mem_word(mem_addr addr,process * p)
 {
   if ((addr >= DATA_BOT) && (addr < data_top) && !(addr & 0x3))
     return p->_data_seg [(addr - DATA_BOT) >> 2];
@@ -869,6 +716,7 @@ my_read_mem_word(mem_addr addr,process * p)
 }
 
 // exits from the process and switchs to another process if there is
+// Also if the process is being waitied on waited process will be woken up
 void process_exit() 
 {
   int old_pid = R[K1_REG];
@@ -876,7 +724,7 @@ void process_exit()
   oldp->store_process();
   // if it is the init process then close the kernel
   if(oldp->_pid == 0){
-    _exit(0);
+    
   }
   // get the size of the blocked queue
   int size_bl = my_read_mem_word(bl_size_ptr,init_process);
@@ -891,6 +739,7 @@ void process_exit()
   // set the current pid status to terminated
   my_set_mem_word(process_state_ptr + oldp->_pid*BYTES_PER_WORD,
   TERMINATED,init_process);
+  free_process(oldp);
 
   if(parent_status == BLOCKED){
       // switch to parent
@@ -989,6 +838,159 @@ void process_exit()
 }
 
 // Initializes some memory part for the kernel to work properly
+// Will be called in the start of the kernel
 void init_kernel(){
+  // create the process struct
+      init_process = new process("init");
+      processes[0] = init_process;
+      // Set parent to NULL since it has no parent
+      init_process->_parent = NULL;
+      // this will be the init process.
+      // setting the address of the assembly file
+      ready_processes_ptr = lookup_label(ready_processes_lname)->addr;
+      blocked_processes_ptr = lookup_label(blocked_processes_lname)->addr;
+      process_state_ptr = lookup_label(process_states_lname)->addr;
+      handler_ptr = lookup_label(timer_interrupt_handler_name)->addr;
+      bl_size_ptr = lookup_label(bl_size_lname)->addr;
+      rl_size_ptr = lookup_label(rl_size_lname)->addr;
+}
+
+imm_expr * my_copy_imm_expr (imm_expr *old_expr)
+{
+  imm_expr *expr = (imm_expr *) xmalloc (sizeof (imm_expr));
+
+  memcpy ((void*)expr, (void*)old_expr, sizeof (imm_expr));
+  return (expr);
+}
+
+instruction * my_copy_inst (instruction *inst)
+{
+  instruction *new_inst = (instruction *) xmalloc (sizeof (instruction));
+  if(inst)
+    *new_inst = *inst;
+  else
+    return inst;
+  /*memcpy ((void*)new_inst, (void*)inst , sizeof (instruction));*/
+  if(EXPR(inst))
+    SET_EXPR (new_inst, my_copy_imm_expr (EXPR (inst)));
+  return (new_inst);
+}
+
+process::process(const char * process_name){
   
+  _parent = processes[R[K1_REG]];
+  _pid = next_pid++;
+  _process_name = std::string(process_name);
+  _pstate = READY;
+
+  for (int i = 0; i < 26; i++)
+    _R[i] = R[i];
+  for (int i = 28; i < R_LENGTH; i++)
+    _R[i] = R[i];
+  _HI = HI;
+  _LO = LO;
+  _PC = PC;
+  _nPC = nPC;
+
+  _FPR = FPR;
+  _FGR =  FGR; 
+  _FWR = FWR; 
+
+  for(int i = 0; i < 4 ; i++){
+    for(int j = 0;j < 32; j++){
+      _CCR[i][j] = CCR[i][j];
+      _CPR[i][j] =CPR[i][j];
+    }
+  }
+  int instruction_count = (text_top - TEXT_BOT )>> 2;
+  _text_seg = (instruction **) xmalloc(sizeof(instruction*)*instruction_count);
+  for (int i = 0; i < instruction_count; i++)
+    _text_seg[i] = my_copy_inst(text_seg[i]);
+  _text_top = text_top;
+  
+  _data_seg = (mem_word *) malloc (initial_data_size);
+  memcpy(_data_seg,data_seg,initial_data_size);
+  _data_seg_b = (BYTE_TYPE *) _data_seg;
+  _data_seg_h = (short *) _data_seg;
+  
+  _data_top = data_top;
+  
+  _stack_seg = (mem_word *) malloc (initial_stack_size);
+  memcpy(_stack_seg,stack_seg,initial_stack_size);
+  _stack_seg_b = (BYTE_TYPE *) _stack_seg;
+  _stack_seg_h = (short *) _stack_seg;
+  _stack_bot  = stack_bot;
+
+  _gp_midpoint = gp_midpoint;
+
+  _text_modified = true;
+  _data_modified = true;
+
+}
+
+void process::store_process(){
+  for (int i = 0; i < 26; i++)
+    _R[i] = R[i];
+  for (int i = 28; i < R_LENGTH; i++)
+    _R[i] = R[i];
+
+
+  _HI = HI;
+  _LO = LO;
+  
+  _PC = PC;
+  _nPC = nPC;
+  
+  _FPR = FPR;
+  _FGR = FGR; 
+  _FWR = FWR; 
+
+
+  _text_seg = text_seg;
+  _text_top = text_top;
+  _data_seg = data_seg;
+  _data_seg_b = data_seg_b;
+  _data_seg_h = data_seg_h;
+  _data_top = data_top;
+  _stack_seg = stack_seg;
+  _stack_seg_b = stack_seg_b;
+  _stack_seg_h = stack_seg_h;
+  _stack_bot = stack_bot;
+  _gp_midpoint = gp_midpoint;
+  _text_modified = text_modified;
+  _data_modified = data_modified;
+
+}
+
+void process::load_process(){
+  for (int i = 0; i < 26; i++)
+    R[i] = _R[i];
+  for (int i = 28; i < R_LENGTH; i++)
+    R[i] = _R[i];
+  
+
+  HI = _HI;
+  LO = _LO;
+  
+  PC = _PC;
+  nPC = _nPC;
+  
+  FPR = _FPR;
+  FGR = _FGR; 
+  FWR = _FWR; 
+
+  text_seg = _text_seg;
+  text_top = _text_top;
+  data_seg = _data_seg;
+  data_seg_b = _data_seg_b;
+  data_seg_h = _data_seg_h;
+  data_top = _data_top;
+  stack_seg = _stack_seg;
+  stack_seg_b = _stack_seg_b;
+  stack_seg_h = _stack_seg_h;
+  stack_bot = _stack_bot;
+  gp_midpoint = _gp_midpoint;
+  text_modified = _text_modified;
+  data_modified = _data_modified;
+
 }
