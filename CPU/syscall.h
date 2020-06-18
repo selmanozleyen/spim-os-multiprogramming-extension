@@ -31,6 +31,7 @@
 */
 #include <vector>
 #include<string>
+#include <algorithm>    // std::find
 /* Exported functions. */
 
 
@@ -69,13 +70,6 @@ struct process{
   short *_stack_seg_h;		/* Points to same vector as STACK_SEG */
   BYTE_TYPE *_stack_seg_b;		/* Ditto */
   mem_addr _stack_bot;
-  instruction **_k_text_seg;
-  mem_addr _k_text_top;
-  mem_word *_k_data_seg;
-  short *_k_data_seg_h;
-  BYTE_TYPE *_k_data_seg_b;
-  mem_addr _k_data_top;
-    
 };
 
 
@@ -85,13 +79,16 @@ void handle_exception ();
 void empty_curr();
 void spim_fork();
 void spim_execv(char * path);
-bool schedule(bool in_syscall);
 void print_process(process * p);
 void free_process(process * p);
 void spim_wait();
 void print_table();
+void my_set_mem_word(mem_addr addr, reg_word value, process * p);
+reg_word my_read_mem_word(mem_addr addr,process * p);
+void process_exit();
 
 #define PRINT_ON_SWITCH 0
+#define PROCESS_COUNT 100
 
 #define PRINT_INT_SYSCALL	1
 #define PRINT_FLOAT_SYSCALL	2
@@ -121,10 +118,21 @@ void print_table();
 #define WAITPID_SYSCALL     20
 #define RANDOM_INT_SYSCALL     21
 #define PROCESS_EXIT_SYSCALL     22
+#define INIT_PROCESS_STRUCTURE  23
+#define PRINT_PT_SYSCALL	24
+#define LOAD_NEXT_PROCESS_SYSCALL 25
 
-#define READY 40
-#define RUNNING 41
-#define BLOCKED 42
-#define TERMINATED 43
+#define HW5_INT_ENABLE 0x8000
+
+#define RUNNING 1
+#define BLOCKED 2
+#define READY 3
+#define TERMINATED 4
 
 #define BYTES_TO_INST(N) (((N) + BYTES_PER_WORD - 1) / BYTES_PER_WORD * sizeof(instruction*))
+
+#define K0_REG 26
+#define K1_REG 27
+#define S0_REG 16
+#define S1_REG 17
+#define S2_REG 18

@@ -57,6 +57,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include "data.h"
 
 using namespace std;
 
@@ -113,14 +114,21 @@ void windowsParameterHandlingControl(int flag )
 #endif
 
 
-int switched = 0;
 int init = 1;
 int next_pid = 0;
-std::vector<process*> blocked_processes;
-std::vector<process*> ready_processes;
-process * cur_process;
-
-
+process * init_process = NULL;
+process *  processes[PROCESS_COUNT];
+int in_kernel = 0;
+char * timer_interrupt_handler_name = "_handle_interrupt";
+// pointers to the assembly file
+int ready_processes_ptr = 0;
+int blocked_processes_ptr = 0;
+int process_state_ptr = 0;
+int kernel_regs_ptr= 0;
+int user_regs_ptr= 0;
+int handler_ptr = 0;
+int bl_size_ptr = 0;
+int rl_size_ptr = 0;
 
 imm_expr *
 my_copy_imm_expr (imm_expr *old_expr)
@@ -147,12 +155,15 @@ my_copy_inst (instruction *inst)
 
 
 process::process(const char * process_name){
-  _parent = cur_process;
+  
+  _parent = processes[R[K1_REG]];
   _pid = next_pid++;
   _process_name = std::string(process_name);
   _pstate = READY;
 
-  for (int i = 0; i < R_LENGTH; i++)
+  for (int i = 0; i < 26; i++)
+    _R[i] = R[i];
+  for (int i = 28; i < R_LENGTH; i++)
     _R[i] = R[i];
   _HI = HI;
   _LO = LO;
@@ -188,25 +199,6 @@ process::process(const char * process_name){
   _stack_seg_h = (short *) _stack_seg;
   _stack_bot  = stack_bot;
 
-  _k_text_seg = (instruction **) malloc (BYTES_TO_INST(initial_k_text_size));
-  memcpy(_k_text_seg,k_text_seg,initial_k_text_size);
-  
-
-  instruction_count = (k_text_top - K_TEXT_BOT)>> 2;
-  _k_text_seg = (instruction **) xmalloc(sizeof(instruction*)*instruction_count);
-  for (int i = 0; i < instruction_count; i++)
-    _k_text_seg[i] = my_copy_inst(k_text_seg[i]);
-
-  _k_text_top = k_text_top;
-
-  
-  _k_data_seg = (mem_word *) malloc (initial_k_data_size);
-  memcpy(_k_data_seg,k_data_seg,initial_k_data_size);
-
-  _k_data_seg_b = (BYTE_TYPE *) _k_data_seg;
-  _k_data_seg_h = (short *) _k_data_seg;
-  k_data_top = k_data_top;
-
   _gp_midpoint = gp_midpoint;
 
   _text_modified = true;
@@ -217,8 +209,13 @@ process::process(const char * process_name){
 
 
 void process::store_process(){
-  for (int i = 0; i < R_LENGTH; i++)
+  for (int i = 0; i < 26; i++)
     _R[i] = R[i];
+  for (int i = 28; i < R_LENGTH; i++)
+    _R[i] = R[i];
+  
+ 
+
   _HI = HI;
   _LO = LO;
   
@@ -229,12 +226,6 @@ void process::store_process(){
   _FGR = FGR; 
   _FWR = FWR; 
 
-  for(int i = 0; i < 4 ; i++){
-    for(int j = 0;j < 32; j++){
-      _CCR[i][j] = CCR[i][j];
-      _CPR[i][j] = CPR[i][j];
-    }
-  }
 
   _text_seg = text_seg;
   _text_top = text_top;
@@ -246,12 +237,6 @@ void process::store_process(){
   _stack_seg_b = stack_seg_b;
   _stack_seg_h = stack_seg_h;
   _stack_bot = stack_bot;
-  _k_text_seg = k_text_seg;
-  _k_text_top = k_text_top;
-  _k_data_seg = k_data_seg;
-  _k_data_seg_b = k_data_seg_b;
-  _k_data_seg_h = k_data_seg_h;
-  _k_data_top = k_data_top;
   _gp_midpoint = gp_midpoint;
   _text_modified = text_modified;
   _data_modified = data_modified;
@@ -259,8 +244,12 @@ void process::store_process(){
 }
 
 void process::load_process(){
-  for (int i = 0; i < R_LENGTH; i++)
+  for (int i = 0; i < 26; i++)
     R[i] = _R[i];
+  for (int i = 28; i < R_LENGTH; i++)
+    R[i] = _R[i];
+  
+
   HI = _HI;
   LO = _LO;
   
@@ -270,13 +259,6 @@ void process::load_process(){
   FPR = _FPR;
   FGR = _FGR; 
   FWR = _FWR; 
-
-  for(int i = 0; i < 4 ; i++){
-    for(int j = 0;j < 32; j++){
-      CCR[i][j] = _CCR[i][j];
-      CPR[i][j] = _CPR[i][j];
-    }
-  }
 
   text_seg = _text_seg;
   text_top = _text_top;
@@ -288,12 +270,6 @@ void process::load_process(){
   stack_seg_b = _stack_seg_b;
   stack_seg_h = _stack_seg_h;
   stack_bot = _stack_bot;
-  k_text_seg = _k_text_seg;
-  k_text_top = _k_text_top;
-  k_data_seg = _k_data_seg;
-  k_data_seg_b = _k_data_seg_b;
-  k_data_seg_h = _k_data_seg_h;
-  k_data_top = _k_data_top;
   gp_midpoint = _gp_midpoint;
   text_modified = _text_modified;
   data_modified = _data_modified;
@@ -302,8 +278,62 @@ void process::load_process(){
 
 /*You implement your handler here*/
 void SPIM_timerHandler()
-{
-   schedule(false);
+{ 
+  printf("Cur Pid : %d\n",R[K1_REG]);
+  int size_rl = my_read_mem_word(rl_size_ptr,init_process);
+  for (int i = 0; i < size_rl; i++)
+  {
+    printf("Rp[%d]=%d\n",i,my_read_mem_word(
+      ready_processes_ptr + i*BYTES_PER_WORD,
+      init_process
+    ));
+  }
+  int size_bl = my_read_mem_word(bl_size_ptr,init_process);
+  for (int i = 0; i < size_bl; i++)
+  {
+    printf("Bp[%d]=%d\n",i,my_read_mem_word(
+      blocked_processes_ptr + i*BYTES_PER_WORD,
+      init_process
+    ));
+  }
+  for (int i = 0; i < next_pid; i++)
+  {
+    printf("Status[%d]=%d\n",i,my_read_mem_word(
+      process_state_ptr + i*BYTES_PER_WORD,
+      init_process
+    ));
+  }
+  // interrupts are disabled when the current process running is init process
+  int init_status = my_read_mem_word(process_state_ptr,init_process);
+  fprintf(stdout,"Here in handler.\n");
+  fflush(stdout);
+  if(init_status>=4 || init_status < 0){
+    perror("Block queue in assembly file is corrupted.");
+    _exit(-1);
+  }
+  if(R[K0_REG]==0 && init_status == BLOCKED && init_process != NULL){
+    // Save the proccess with the state before interrupt
+    int cur_pid = R[K1_REG];
+    processes[cur_pid]->store_process();
+    init_process->load_process();
+    PC = handler_ptr;
+    fprintf(stdout,"Have set the interrupt PC.\n");
+    fflush(stdout);
+  } 
+}
+
+
+void kernel_load_next_process(int pid){
+  //first store the current state of the kernel only the data segment
+
+  // store the previous values
+  
+  R[K1_REG] = pid; 
+  R[K0_REG] = 0;
+  processes[pid]->load_process();
+  processes[pid]->_PC -= BYTES_PER_WORD;
+  // after syscall is over pc will be incremented to equalize this PC is decremented
+  PC -= BYTES_PER_WORD;
 }
 
 /* Decides which syscall to execute or simulate.  Returns zero upon
@@ -316,21 +346,43 @@ do_syscall ()
 #ifdef _WIN32
     windowsParameterHandlingControl(0);
 #endif
-  
-  //if(cur_process == NULL)
-  if(!schedule(true))
-    return (1);
-  cur_process->store_process();
+
   /* Syscalls for the source-language version of SPIM.  These are easier to
      use than the real syscall and are portable to non-MIPS operating
      systems. */
 
   switch (R[REG_V0])
     {
+    // This syscall will store the current registers and data segments
+    // to the given process
+    case LOAD_NEXT_PROCESS_SYSCALL:
+      kernel_load_next_process(R[REG_A0]);
+      return(1);
+    case PRINT_PT_SYSCALL:
+      print_table();
+      break;
+    // This syscall will be called by the kernel only
+    // It will initialize the process structure in the
+    // Os emulator
+    case INIT_PROCESS_STRUCTURE:
+      // create the process struct
+      init_process = new process("init");
+      processes[0] = init_process;
+      // Set parent to NULL since it has no parent
+      init_process->_parent = NULL;
+      // this will be the init process.
+      // setting the address of the assembly file
+      ready_processes_ptr = lookup_label("ready_processes")->addr;
+      blocked_processes_ptr = lookup_label("blocked_processes")->addr;
+      process_state_ptr = lookup_label("process_states")->addr;
+      // kernel_regs_ptr = lookup_label("kernel_regs")->addr;
+      // user_regs_ptr = lookup_label("user_regs")->addr;
+      handler_ptr = lookup_label(timer_interrupt_handler_name)->addr;
+      bl_size_ptr = lookup_label("bl_size")->addr;
+      rl_size_ptr = lookup_label("rl_size")->addr;
+      break;
     case PROCESS_EXIT_SYSCALL:
-      spim_return_value = 0;
-      cur_process->_pstate = TERMINATED;
-      schedule(true);
+      process_exit();
       return (1);
     case RANDOM_INT_SYSCALL:
       srand(time(NULL));
@@ -347,6 +399,8 @@ do_syscall ()
       return (1);
       break;
     case FORK_SYSCALL:
+      fprintf (stdout,"in fork\n");
+      fflush(stdout);
       spim_fork();
       return (1);
       break;
@@ -430,14 +484,14 @@ do_syscall ()
 
     case EXIT_SYSCALL:
       spim_return_value = 0;
-      cur_process->_pstate = TERMINATED;
-      schedule(true);
+      //cur_process->_pstate = TERMINATED;
+      //schedule(true);
       return (1);
 
     case EXIT2_SYSCALL:
-      cur_process->_pstate = TERMINATED;
+      //cur_process->_pstate = TERMINATED;
       spim_return_value = R[REG_A0];	/* value passed to spim's exit() call */
-      schedule(true);
+      //schedule(true);
       return (1);
 
     case OPEN_SYSCALL:
@@ -598,22 +652,48 @@ void empty_curr(){
 
 //Copies the current process
 void spim_fork(){
-  //copied the process
-  process * newp = new process(cur_process->_process_name.data());
-  newp->_R[REG_V0] = 0;
-  R[REG_V0] = newp->_pid;
-  newp->_PC = PC + 4;
-  
-  newp->_parent = cur_process;
-  ready_processes.push_back(newp);
-  cur_process->childs.push_back(newp);
-
+  // copied the process
+  // cur_pid = $k1
+  int cur_pid = R[K1_REG];
+  process * cur_process = processes[cur_pid];
   cur_process->store_process();
-  if(PRINT_ON_SWITCH)
-   print_table();
+  process * newp = new process(cur_process->_process_name.data());
+  processes[newp->_pid] = newp;
+  // Set the return value for child process
+  newp->_R[REG_V0] = 0;
+  // Set the return value for parent process
+  cur_process->_R[REG_V0] = newp->_pid;
+  // New process PC will be incremented
+  newp->_PC = PC + BYTES_PER_WORD;
+
+  // set the parent
+  newp->_parent = cur_process;
+  //ready_processes.push_back(newp);
+  // add to childs
+  cur_process->childs.push_back(newp);
+  int newpid = newp->_pid;
+
+  // change size of the ready queue
+  // size of the ready queue is in $s1 of the init process
+  int size = my_read_mem_word(rl_size_ptr,init_process);
+  my_set_mem_word(rl_size_ptr,size+1,init_process);
+  
+  // set the end of the list to the new pid
+  my_set_mem_word(ready_processes_ptr+BYTES_PER_WORD*(size),
+  newp->_pid,
+  init_process);
+  // set the status of the process to ready
+  my_set_mem_word(process_state_ptr+BYTES_PER_WORD*newpid,
+  READY,
+  init_process);
+  // if this is the kernel process then it must be loaded again to update values
+  if(cur_process == init_process)
+    init_process->load_process();
+    
 }
 
 void spim_execv(char * path){
+  // set the name for process
   string temp = string(path);
   int last_index1,last_index2;
   last_index1  = temp.find_last_of('\\');
@@ -621,159 +701,114 @@ void spim_execv(char * path){
   last_index1 = MAX(last_index1,last_index2);
   if (last_index1 < 0)
     last_index1 = 0;
+  // get the current process from $k1 register
+  process * cur_process = processes[R[K1_REG]];
   cur_process->_process_name = string(path+last_index1);
-  empty_curr();  
-  initialize_world (getenv ("SPIM_EXCEPTION_HANDLER"), true);
+  // empty  current globals but before save the kernel registers
+  if(cur_process->_process_name.size() > 18){
+    fprintf(stdout,"%s\n",cur_process->_process_name);
+    fprintf(stdout,"There is a problem iwth registers.");
+    fflush(stdout);
+    _exit(-1);
+  }
+  int k1 = R[K1_REG];
+  empty_curr();
+  make_memory (initial_text_size,
+	       initial_data_size, initial_data_limit,
+	       initial_stack_size, initial_stack_limit,
+	       initial_k_text_size,
+	       initial_k_data_size, initial_k_data_limit);
+  initialize_registers ();
+  initialize_inst_tables ();
+  initialize_symbol_table ();
+  k_text_begins_at_point (K_TEXT_BOT);
+  k_data_begins_at_point (K_DATA_BOT);
+  data_begins_at_point (DATA_BOT);
   char * p = strdup(temp.data());
   read_assembly_file(p);
-  PC = find_symbol_address("main")-4;
+  R[K1_REG] = k1;
+  // decrement the value because syscall will incement it
+  PC = find_symbol_address("main")-BYTES_PER_WORD;
+  // store it in the procces contents
   cur_process->store_process();
-
 }
 
 // Returns the child status -1 if there is none
 void spim_wait(){
+  // set the current proccess from assembly file
+  int cur_pid = R[K1_REG];
+  process * cur_process = processes[cur_pid];
   if(cur_process->childs.empty()){
     R[REG_V0] = -1;
-    cur_process->store_process();
-
+    cur_process->_R[REG_V0] = -1;
   }
   else{
-    blocked_processes.push_back(cur_process);
-    cur_process->_pstate = BLOCKED;
-    PC = PC + 4;
+    // push this process to blocked procceses
+    // get the new size of block list 
+    // note that $s0 is the size of the blocked registers
+    int size_bl = my_read_mem_word(bl_size_ptr,init_process) + 1;
+    // set the end of the list to the new pid
+    my_set_mem_word(blocked_processes_ptr+BYTES_PER_WORD*(size_bl-1),
+    cur_process->_pid,
+    init_process);
+    // set the status of the process to blocked
+    my_set_mem_word(process_state_ptr+BYTES_PER_WORD*cur_pid,
+    BLOCKED,
+    init_process);
+    // save the state of the current process
     cur_process->store_process();
-    cur_process = NULL;
-    schedule(true);
+    // increment the blocked process values after the store functions
+    my_set_mem_word(bl_size_ptr,size_bl,init_process);
+    // context switch is going to happen here
+    // get a process from the ready list
+    // $s1 is the size register for ready queue
+    int size_rl = my_read_mem_word(rl_size_ptr,init_process);
+    // if there are none give an error
+    if(size_rl <= 0){
+      perror("There are no other processes");
+      _exit(-1);
+    }
+    // get from the front of the queue
+    int newpid = my_read_mem_word(ready_processes_ptr,init_process);
+    int i = 0,next_val = 0;
+    // shift the values from left to right
+    while(i < size_rl -1){
+      // readyq[i]
+      next_val = my_read_mem_word(ready_processes_ptr+BYTES_PER_WORD*(i+1),
+      init_process);
+      // readyq[i] = readyq[i+1]
+      my_set_mem_word(ready_processes_ptr+BYTES_PER_WORD*i,
+      next_val,
+      init_process);
+
+      i++;
+    }
+    // shifted now decrement the s1 register = size of ready queue
+    my_set_mem_word(rl_size_ptr,size_rl-1,init_process);
+    
+    R[K1_REG] = newpid;
+    // set newpid as running
+    my_set_mem_word(process_state_ptr + newpid*BYTES_PER_WORD,
+    RUNNING,init_process);
+    // Set new current process
+    cur_process = processes[newpid];
+    // Decrement the pc because when syscall ends it will incement it
+    cur_process->_PC-= BYTES_PER_WORD;
+    cur_process->load_process();
   }
 }
 
 
 void print_table(){
-  // fprintf(stderr,"\n________________TABLE___________________\n");
+  // fprintf(stdout,"\n________________TABLE___________________\n");
   // cur_process->store_process();
   // print_process(cur_process);
   // for (size_t i = 0; i < blocked_processes.size(); i++)
   //   print_process(blocked_processes[i]);
   // for (size_t i = 0; i < ready_processes.size(); i++)
   //   print_process(ready_processes[i]);
-  // fprintf(stderr,"________________________________________\n");
-}
-
-bool schedule(bool in_syscall){
-  bool continuable = true;
-  bool cs = false;
-  switched = (switched + 1) % 2;
-  if(cur_process == NULL && init){
-    process * firstp = new process("init");
-    firstp->_pstate = RUNNING;
-    cur_process = firstp;
-    cur_process->_parent = NULL;
-    init = 0;
-    continuable = true;
-    cs = true;
-  }
-  //If it is a blocked it is going to be running one of its ready proccesses
-  else if(cur_process == NULL && !blocked_processes.empty()){
-    process * newp = ready_processes.front();
-    ready_processes.erase(ready_processes.begin());   
-    cur_process = newp;
-    cur_process->load_process();
-    cur_process->_pstate = RUNNING;
-    if(in_syscall)
-      PC = PC - 4;
-    continuable = false;
-    cs = true;
-  }
-  else if(ready_processes.size() != 0 && cur_process->_pstate == RUNNING && switched){
-    cur_process->store_process();
-    process * oldp = cur_process;
-    process * newp = cur_process = ready_processes.front();
-    ready_processes.erase(ready_processes.begin());    
-    ready_processes.push_back(oldp);
-    oldp->_pstate = READY;
-    newp->_pstate = RUNNING;
-    oldp->store_process();
-    newp->load_process();
-    cur_process = newp;
-    if(in_syscall)
-      PC = PC - 4;
-    continuable = false;
-    cs = true;
-  }
-  else if(cur_process->_pstate == TERMINATED){
-    process * oldp = cur_process;
-    process * parentp = NULL;
-    
-    cur_process->store_process();
-    if(cur_process->_pid == 0){
-      exit(0);
-    }
-    
-    for (size_t i = 0; i < blocked_processes.size(); i++){
-      if(blocked_processes[i] == oldp->_parent){
-        parentp = blocked_processes[i];
-        blocked_processes.erase(blocked_processes.begin()+i);
-        break;
-      }
-    }
-    if(oldp->_parent){
-      int old_index = -1;
-      for (size_t i = 0; i < oldp->_parent->childs.size(); i++)
-      {
-        if(oldp->_parent->childs[i] == oldp){
-          old_index =i;
-          break;
-        }
-      }
-      if(old_index != -1)
-        oldp->_parent->childs.erase(oldp->_parent->childs.begin() + old_index);
-      
-      for (size_t i = 0; i < oldp->childs.size(); i++){
-        oldp->childs[i]->_parent = oldp->_parent;
-        oldp->_parent->childs.push_back(oldp->childs[i]);
-      }
-      
-    }
-    //If it has a waiting parent
-    //Context switch to parentp
-    if(parentp){
-      cur_process = parentp;
-      
-      cur_process->load_process();
-      R[REG_V0] = oldp->_pid;
-
-      if(in_syscall)
-        PC = PC - 4;
-      continuable = false;
-      cs = true;
-    }
-    //If there are proccesses remaining
-    else if(ready_processes.size() != 0){
-      cur_process = ready_processes.front();
-      ready_processes.erase(ready_processes.begin());
-      
-      cur_process->load_process();
-      if(in_syscall)
-        PC = PC - 4;
-      continuable = false;
-      cs = true;
-    }
-    else{
-      //NO remaining process
-      exit(0);
-    }
-
-    
-    cur_process->store_process();
-    free_process(oldp);
-    cur_process->_pstate = RUNNING;
-  }
-  
-
-  if(cs && PRINT_ON_SWITCH)
-      print_table();
-  return continuable;
+  // fprintf(stdout,"________________________________________\n");
+  // fflush(stdout);
 }
 
 void free_process(process * p){
@@ -782,14 +817,8 @@ void free_process(process * p){
     if(p->_text_seg[i])
       free_inst(p->_text_seg[i]);
   }
-  instruction_count = (p->_k_text_top - K_TEXT_BOT)>> 2;
-  for (int i = 0; i < instruction_count; i++){
-    if(p->_k_text_seg[i])
-      free_inst(p->_k_text_seg[i]);
-  }
   free(p->_data_seg);
   free(p->_text_seg);
-  free(p->_k_data_seg);
   free(p->_stack_seg);
   free(p);
 }
@@ -797,16 +826,169 @@ void free_process(process * p){
 
 void print_process(process * p){
   
-  fprintf(stderr,"\n");
-  fprintf(stderr,"Pid:%d\nProcess Name:%s\nPC:%d\nStack Pointer Adrress:%p\n",
+  printf("\n");
+  printf("Pid:%d\nProcess Name:%s\nPC:%d\nStack Pointer Adrress:%p\n",
   p->_pid,p->_process_name.data(),p->_PC,(void *)p->_stack_seg);
   if(p->_pstate == RUNNING)
-    fprintf(stderr,"State: Running\n");
+    printf("State: Running\n");
   if(p->_pstate == READY)
-    fprintf(stderr,"State: Ready\n");
+    printf("State: Ready\n");
   if(p->_pstate == BLOCKED)
-    fprintf(stderr,"State: Waiting\n");
+    printf("State: Waiting\n");
   if(p->_pstate == TERMINATED)
-    fprintf(stderr,"State: Terminated\n");
-    
+    printf("State: Terminated\n");
+  
+}
+
+
+void
+my_set_mem_word(mem_addr addr, reg_word value, process * p)
+{
+  if ((addr >= DATA_BOT) && (addr < data_top) && !(addr & 0x3))
+    p->_data_seg [(addr - DATA_BOT) >> 2] = (mem_word) value;
+  else if ((addr >= stack_bot) && (addr < STACK_TOP) && !(addr & 0x3))
+    p->_stack_seg [(addr - stack_bot) >> 2] = (mem_word) value;
+  else{
+    perror("my_set_mem_word");
+    _exit(-1);
+  }
+}
+
+
+reg_word
+my_read_mem_word(mem_addr addr,process * p)
+{
+  if ((addr >= DATA_BOT) && (addr < data_top) && !(addr & 0x3))
+    return p->_data_seg [(addr - DATA_BOT) >> 2];
+  else if ((addr >= stack_bot) && (addr < STACK_TOP) && !(addr & 0x3))
+    return p->_stack_seg [(addr - stack_bot) >> 2];
+  else{
+    perror("my_read_mem_word");
+    _exit(-1);
+  }
+}
+
+// exits from the process and switchs to another process if there is
+void process_exit() 
+{
+  int old_pid = R[K1_REG];
+  process * oldp = processes[old_pid];
+  oldp->store_process();
+  // if it is the init process then close the kernel
+  if(oldp->_pid == 0){
+    _exit(0);
+  }
+  // get the size of the blocked queue
+  int size_bl = my_read_mem_word(bl_size_ptr,init_process);
+  // if the parent of oldp is blocked
+  int parent_pid = oldp->_parent->_pid;
+  process * parentp = processes[parent_pid];
+  // get the status of parent from assembly
+  int parent_status = my_read_mem_word(process_state_ptr+parent_pid*BYTES_PER_WORD,
+  init_process); 
+  
+  // TODO free the process
+  // set the current pid status to terminated
+  my_set_mem_word(process_state_ptr + oldp->_pid*BYTES_PER_WORD,
+  TERMINATED,init_process);
+
+  if(parent_status == BLOCKED){
+      // switch to parent
+      int i = 0;
+      int found_pos = 0;
+      int iter_pid = 0;
+      int found = 0;
+      // find the process in the blocked queue
+      for(; i < size_bl && !found; i++){
+        // iter_pid = blocked_processes[i] (is the same as below)
+        iter_pid = my_read_mem_word(blocked_processes_ptr + i*(BYTES_PER_WORD),
+        init_process
+        );
+        // if found store the related infos
+        if (iter_pid == parent_pid){
+          found = 1;
+          found_pos = i;
+        }
+      }
+      // Give an error if there is no pid in the blocked list
+      if(!found){
+        perror("Blocked list corrupted");
+        _exit(-1);
+      }
+      // Remove the pid from the blocked list    
+      // set the position to be replaced
+      i = found_pos;
+      int next_val = 0;
+      // shift the values from left to right
+      while(i < size_bl - 1){
+        // save blockedq[i+1]
+        next_val = my_read_mem_word(
+        blocked_processes_ptr+BYTES_PER_WORD*(i+1),
+        init_process);
+        // blockedq[i] = blockedq[i+1]
+        my_set_mem_word(blocked_processes_ptr + BYTES_PER_WORD*i,
+        next_val,
+        init_process);
+
+        i++;
+      }
+      // decrement the size of the blocked list
+      my_set_mem_word(bl_size_ptr,size_bl-1,init_process);
+
+      // remove from parents child
+      auto iter = find(parentp->childs.begin(),parentp->childs.end(),oldp);
+      if(*iter != oldp){
+        perror("Corruption Error");
+        _exit(-1);
+      }
+      parentp->childs.erase(iter);
+
+      // set the new_pid $k1
+      R[K1_REG] = parent_pid;
+      // set parent to running
+      my_set_mem_word(process_state_ptr + parent_pid*BYTES_PER_WORD,
+      RUNNING,init_process);
+      // load the parent process
+      processes[parent_pid]->load_process();
+  }
+  else{
+      // do round robin 
+      int size_rl = my_read_mem_word(rl_size_ptr,init_process);
+      // if there are none give an error
+      if(size_rl <= 0){
+        printf("There are no other processes that can run.\n");
+        _exit(1);
+      }
+      // get from the front of the queue
+      int newpid = my_read_mem_word(ready_processes_ptr,init_process);
+      int i = 0,next_val = 0;
+      // shift the values from left to right
+      while(i < size_rl -1){
+        // readyq[i]
+        next_val = my_read_mem_word(ready_processes_ptr+BYTES_PER_WORD*(i+1),
+        init_process);
+        // readyq[i] = readyq[i+1]
+        my_set_mem_word(ready_processes_ptr,
+        next_val,
+        init_process);
+
+        i++;
+      }
+      // shifted now decrement the s1 register = size of ready queue
+      my_set_mem_word(rl_size_ptr,size_rl-1,init_process);
+      R[K1_REG] = newpid;
+      // set newpid as running
+      my_set_mem_word(process_state_ptr + newpid*BYTES_PER_WORD,
+      RUNNING,init_process);
+      // Set new current process
+      process * cur_process = processes[newpid];
+      // Decrement the pc because when syscall ends it will incement it
+      cur_process->_PC-= BYTES_PER_WORD;
+      cur_process->load_process();
+    }
+}
+
+// Initializes some memory part for the kernel to work properly
+void init_kernel(){
+  
 }

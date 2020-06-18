@@ -119,7 +119,6 @@ bool mapped_io;			/* => activate memory-mapped IO */
 int pipe_out;
 int spim_return_value;		/* Value returned when spim exits */
 
-
 /* Local variables: */
 
 /* => load standard exception handler */

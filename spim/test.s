@@ -24,63 +24,61 @@ init:
     # Even though k0 is initially 0 it is set again
     # Disabling interrupts
     ori $k0,$0,0
-    # Calling init structure func
+    # Critical section with no interrupts
     jal _init_process_structure
-    
     # Enabling interrupts
     ori $k0,$0,1
-    
-    # a variable to be used on the final loop
-    # t0 = -1
-    li $t0,-1
 
-    # fork is a critical region disable interrupts
-    ori $k0,$0,0 # interrupts disabled
-    # fork() 
+    # Critical section blocking interrupts
+    ori $k0,$0,0 # Blocked Interrupts
+    # Fork syscall
     li $v0,18
     syscall
-    ori $k0,$0,1 # interrupts enabled
+    beq $v0,$0,child_process
+    # Unblock interrupts
+    ori $k0,$0,1 # Unblocked Interrupts
 
-    # If this is the child process branch
-    
-    # if(child) {branch();}
-    beq $v0,$0,if_child
-    # comes here after the if branch
-
-    ori $k0,$0,0 # interrupts disabled
-    # fork()
+    #child 2
+    # Critical section blocking interrupts
+    ori $k0,$0,0 # Blocked Interrupts
+    # Fork syscall
     li $v0,18
     syscall
-    ori $k0,$0,1 # interrupts enabled    
-    # if(child) {branch();}
-    beq $v0,$0,if_child2
-    # comes here after the if branch
+    beq $v0,$0,child_process2
+    # Unblock interrupts
+    ori $k0,$0,1 # Unblocked Interrupts
 
-    ori $k0,$0,0 # interrupts disabled
-    # fork()
+    #child 3
+    # Critical section blocking interrupts
+    ori $k0,$0,0 # Blocked Interrupts
+    # Fork syscall
     li $v0,18
     syscall
-    ori $k0,$0,1 # interrupts enabled    
-    # if(child) {branch();}
-    beq $v0,$0,if_child3
-    # comes here after the if branch
+    beq $v0,$0,child_process3
+    # Unblock interrupts
+    ori $k0,$0,1 # Unblocked Interrupts
 
-l1:
-    # wait any child
-    # wait()
-    li $v0,20
+    #child 4
+    # Critical section blocking interrupts
+    ori $k0,$0,0 # Blocked Interrupts
+    # Fork syscall
+    li $v0,18
     syscall
+    beq $v0,$0,child_process4
+    # Unblock interrupts
+    ori $k0,$0,1 # Unblocked Interrupts
 
-    # if there are no children left go to finised branch.
-    # if(v0 == -1) {branch(finished);}
-    li $t0,-1
-    beq $t0,$v0,finished
-    # else continue to the loop
-j l1
 
-finished:
+loop:
+    ori $k0,$0,0 # Blocked Interrupts
+    la $a0,debug2
+    li $v0,4
+    syscall
+    ori $k0,$0,1 # Unblocked Interrupts
+    j loop
+
     # the loop for waiting children is over.
-    # propmt the user that the kernel is exitting
+    # prompt the user that the kernel is exitting
     # print("Exiting kernel...\n")
     li $v0,4
     la $a0,prompt
@@ -89,37 +87,43 @@ finished:
 
     # Close the kernel
     # exit_process_syscall()
-    li $v0,22
+    li $v0,8
     syscall
 
-
-if_child:
-    # The process here is a child
-    # Now call execv to load the new process
-    # execv(filename)
-    la $v0,19
-    la $a0,filename
+child_process:
+    la $a0,debug3
+    li $v0,4
     syscall
-    # if exev is successful this part wont be executed 
+    ori $k0,$0,1 # Unblocked Interrupts
+    j child_process
 
-if_child2:
-    # The process here is a child
-    # Now call execv to load the new process
-    # execv(filename)
-    la $v0,19
-    la $a0,filename2
+child_process2:
+    la $a0,debug5
+    li $v0,4
     syscall
-    # if exev is successful this part wont be executed 
+    ori $k0,$0,1 # Unblocked Interrupts
+    j child_process2
 
-if_child3:
-    # The process here is a child
-    # Now call execv to load the new process
-    # execv(filename)
-    la $v0,19
-    la $a0,filename3
+child_process3:
+    la $a0,debug6
+    li $v0,4
     syscall
-    # if exev is successful this part wont be executed 
+    ori $k0,$0,1 # Unblocked Interrupts
+    j child_process3
 
+child_process4:
+    la $a0,debug7
+    li $v0,4
+    syscall
+    ori $k0,$0,1 # Unblocked Interrupts
+    j child_process4
+
+child_process5:
+    la $a0,debug8
+    li $v0,4
+    syscall
+    ori $k0,$0,1 # Unblocked Interrupts
+    j child_process5
 ############################# HANDLER PART ##################################
 .data
 # There can be at most process 100 process created in this OS
@@ -584,6 +588,7 @@ _init_process_structure:
     sw $t7,kernel_regs+52 # kernel_regs[13]=$t7
     sw $t8,kernel_regs+56 # kernel_regs[14]=$t8
     sw $t9,kernel_regs+60 # kernel_regs[15]=$t9
+    #sw $ra,kernel_regs+64 # kernel_regs[16]=$ra
 
     # RESTORE THE USER REGISTERS
     # first the arguments
