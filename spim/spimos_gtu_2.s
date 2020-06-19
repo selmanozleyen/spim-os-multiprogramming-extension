@@ -150,7 +150,7 @@ _handle_interrupt:
 
     # Load the registers for kernel and PC
     
-    ori $k0,,$0,1 # disable interrupts
+    ori $k0,$0,1 # disable interrupts
 
 
     # Do a context switch if the ready queue is not empty.

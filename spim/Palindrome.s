@@ -111,7 +111,13 @@ error_mes: .asciiz "Error Occured."
 # Giving the result
 is_palindrom_mes: .asciiz "Palindrome"
 is_not_palindrom_mes: .asciiz "Is Not Palindrome"
-newline: .asciiz "\n"
+# for asking the user if cont
+# IMPORTANT NOTE: will accept anything that starts with y no otherwise
+do_you_want_to_cont: .asciiz "Do you want to continue ? (y/n)"
+# say goodbye to user
+exit_prompt: .asciiz "Goodbye..."
+last_prompt: .asciiz "Please enter the last word:"
+input_buf: .space 100
 #text segment
 .text
 .globl main
@@ -123,7 +129,7 @@ main:
 l1:
 	lw $s1,0($s0) #load the pointer of the word
 	# load word pointer as arg
-	la $a0,0($s1)	
+	la $a0,0($s1)
     # call the next function is_palindrome
 	jal is_palindrome
 	
@@ -134,6 +140,43 @@ l1:
     # if not exited continue
 	j l1
 exit:
+    # continue if the user wants to
+    la $a0,do_you_want_to_cont
+    li $v0,27
+    # print_string(ask_user)
+    syscall
+
+    la $a0,input_buf # input buffer address
+    li $a1,12 #max length for input
+    li $v0,8 # read_string
+    # read_string
+    syscall
+    
+    li $s4,121 # y in ascii
+    lb $v0,($a0) # get the first letter
+    # if answer doesnt start with y finalize
+    bne $s4,$v0,finalize # finalize if is user says so
+
+    # otherwise ask a string
+    la $a0,last_prompt 
+    li $v0,27 
+    # print_string(last word)
+    syscall
+
+    la $a0,input_buf # input buffer address
+    li $a1,99 #max length for input
+    li $v0,8 # read_string
+    # read_string
+    syscall
+    
+    # call the palindrom with the input
+    jal is_palindrome
+finalize:
+    # print that the program is over
+    li $v0,27
+    la $a0,exit_prompt
+    # print_string("goodbye")
+    syscall
     # program is over
 	li $v0,22 # process_exit();
 	syscall
@@ -158,9 +201,10 @@ strlen_n_lower:
 strlen_loop:
 	lb $t1,($a0) # t1 = arr[0]
 
-    # before checking if null lowercase it if it is uppercase
+    # before checking if null,lowercase it if it is uppercase
     jal to_lower
 	# if t1 == 0 then length is $v0
+
 	beq $t1,$0,strlen_end #if null occured go to end branch
 	addi $v0,$v0,1 #increment the result
 	addi $a0,$a0,1 # go to the next byte
@@ -190,22 +234,38 @@ to_lower:
 
     li $t2,64 # the lower limit ( uppercase A )
     li $t3,91 # the upper limit ( uppercase Z )
+    li $t8,96 # the lower limit (a)
+    li $t9,123 # the upper limit (z)
+    li $s7,10 # newline
     li $t4,32 # number to add to get lowercase
     
-    slt $t5,$t2,$t1 # lower_limit < char
-    slt $t6,$t1,$t3 # char upper_limit
-    and $t5,$t5,$t6 # lower_limit < char && char < upper_limit == $t5
-    beq $t5,$0,not_lower # branch if not lower
-
+    beq $t1,$s7,is_newline # branch if newline
+    beq $t1,$0,is_lower # return if NULL too
+    slt $t5,$t8,$t1 # a < char
+    slt $t6,$t1,$t9 # char < z
+    and $t5,$t5,$t6 # a < char && char < z == $t5
+    bne $t5,$0,is_lower # branch if lower
+    # now check if it is lower   
+    slt $t5,$t2,$t1 # A < char
+    slt $t6,$t1,$t3 # char < Z
+    and $t5,$t5,$t6 # A < char && char < Z == $t5
+    beq $t5,$0,is_invalid # branch if it is not upper either
+    # here if uppercase
     #is lower decrement thr value of t1
     add $t1,$t4,$t1
     # store the changed char
     sb $t1,($a0)
 
-not_lower:
+is_lower:
     # return to caller
     jr $ra
 
+is_newline:
+    #store null and return
+    sb $0,($a0)
+    li $t1,0
+    # return 
+    jr $ra
 ################ end to_lower ##############################################
 
 ############################################################################
@@ -275,14 +335,15 @@ is_palindrome_end:
 is_invalid:
     lw $ra,0($sp) # restore 1 word
     addi $sp,$sp,4 # allocate 1 word
-    # print and return
+    # print and exit
     
     la $a0,error_mes
     li $v0,27
     # process_print_string(str)
     syscall
 
-    # return
-    jr $ra
+    # process_exit
+    li $v0,22
+    syscall
 
 ################################is_palindrom end############################

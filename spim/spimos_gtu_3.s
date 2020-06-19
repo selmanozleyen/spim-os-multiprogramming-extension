@@ -13,7 +13,7 @@ main:
     # initialize the tables
     jal _init_process_structure
 
-    li $a0, 3  #Max bound to select the excluded random process.
+    li $a0, 4  #Max bound to select the excluded random process.
     li $v0, 21  #Random Number Syscall.
     # rand()
     syscall
@@ -57,7 +57,7 @@ l2:
     syscall
 
     # if v0 == 0 then call execv with $t2
-    la $a0,($t1) # $a0 = $t2
+    la $a0,($t2) # $a0 = $t2
     beq $v0,$0,is_child # if(child) execv 
 
     addi $t6, $t6,-1# $t6 = $t6 -1
@@ -167,7 +167,7 @@ _handle_interrupt:
 
     # Load the registers for kernel and PC
     
-    ori $k0,,$0,1 # disable interrupts
+    ori $k0,$0,1 # disable interrupts
 
 
     # Do a context switch if the ready queue is not empty.

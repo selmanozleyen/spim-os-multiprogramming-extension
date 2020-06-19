@@ -1010,6 +1010,14 @@ void process_print_int(int mes){
 // Provides Atomic Printing For Palindrom File
 void palindrome_print(int no, char * word, char * res){
   int cur_pid = R[K1_REG];
+  if(word == NULL){
+    perror("Syscall input error");
+    _exit(-1);
+  }
+  int size = strlen(word);
+  // if there is newline at the end remove it because this function is going to print it
+  if(size > 1 && word[size-1] == '\n')
+    word[size-1] = 0;
   printf("Process[id = %d, name = %s]: %d : %s : %s\n",cur_pid,processes[cur_pid]->_process_name.data(),
   no,word,res);
 }
