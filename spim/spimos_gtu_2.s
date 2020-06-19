@@ -1,16 +1,11 @@
 .data
-filename: .asciiz "Collatz.asm"
-filename2: .asciiz "BinarySearch.asm"
-filename3: .asciiz "LinearSearch.asm"
-prompt: .asciiz "\nExitting Kernel...\n"
-debug1: .asciiz "\here before sw\n"
-debug2: .asciiz "In Parent\n"
-debug3: .asciiz "In Child\n"
-debug4: .asciiz "In CS part\n"
-debug5: .asciiz "IN child 1\n"
-debug6: .asciiz "IN child 2\n"
-debug7: .asciiz "IN child 3\n"
-debug8: .asciiz "IN child 4\n"
+# File names of the programs to load
+filename: .asciiz "LinearSearch.s"
+filename2: .asciiz "BinarySearch.s"
+filename3: .asciiz "Collatz.s"
+filename4: .asciiz "Palindrome.s"
+# Kernel Prompt Message
+prompt: .asciiz "Exitting Kernel...\n"
 .text
 .globl main
 main:
@@ -21,73 +16,102 @@ main:
 ############################################################################
 init:
     # interrupts will get enabled when init is blocked
-    
-
+    # initialize the tables
     jal _init_process_structure
 
-    li $t0,-1
-    li $t1,1
-    li $t2,2
+    li $t0,-1 #temp var to compare it with pid after wait
+    li $t1,1 #var to check if random number is 1
+    li $t2,2 #var to check if random number is 2
+    li $t3,3 #var to check if random number is 3
     
-    li $a0, 3  #Max bound.
-    li $v0, 21  #Random Number Syscall.
+    li $a0, 4  # Set Max bound to.
+    li $v0, 21  # Random Number Syscall.
+    # rand()
     syscall
+
+    #load the result of rand()
     la $a0,($v0)
 
     #Get in one of those
-    beq $a0,$0,load_f1
-    beq $a0,$t1,load_f2
-    beq $a0,$t2,load_f3
+    beq $a0,$0,load_f1 # if rand is 0
+    beq $a0,$t1,load_f2 # if rand is 1
+    beq $a0,$t2,load_f3 # if rand is 2
+    beq $a0,$t3,load_f4 # if rand is 3
 
-load_f1_end:
-load_f2_end:
-load_f3_end:
-
-
-    li $t3,5
+load_end:
+    # after loading join here
+    li $t3,5 # variable to set the numbers of processes to create
 l2:
-    beq $t3,$0,end_l2
-    #fork
-    li $v0,18
+    beq $t3,$0,end_l2 #if $t3 == 0 end the loop
+    # fork()
+    li $v0,18 # set for fork
     syscall
-    #if it is the child
+    #if it is the child branch
     beq $v0,$0,if_child
-if_child_end:
+    # decrement the numbers to initialize by one
     addi $t3, $t3,-1			# $t3 = $t3 -1
+    # jump again if not exited
     j l2
+
+# come here if the forking is over
 end_l2:
 
+    # loop while there are childs
 l1:
+    # set v0 to accordingly
+    # wait any child
     li $v0,20
+    # wait()
     syscall
+
+    # var to check return value
     li $t0,-1
-    beq $t0,$v0,finished
+    # if finished jump
+    beq $t0,$v0,finished # if(waitpid == -1) branch
+    # loop again if not
     j l1
 
+    # Comes here for the final procedure
 finished:
+    # load the values to prompt
     li $v0,4
     la $a0,prompt
+    # print_string("Exitting kernel...\n")
     syscall
-    #Exit
-    li $v0,10
+    # set to exit process
+    li $v0,22
+    # exit_kernel()
     syscall
 
+    # branches too load file names
 load_f1:
+    # load filename
     la $a0,filename
-    j load_f1_end
+    # return
+    j load_end
 load_f2:
+    # load filename2
     la $a0,filename2
-    j load_f2_end
+    # return
+    j load_end
 load_f3:
+    # load filename3
     la $a0,filename3
-    j load_f3_end
+    # return
+    j load_end
+load_f4:
+    # load filename4
+    la $a0,filename4
+    # return
+    j load_end
 
+    # if the process was the child it will branch here
 if_child:
-    #execv
+    # Set for execv
     li $v0,19
+    # execv()
     syscall
-    j if_child_end
-
+    # if execv() is sucessful this part is not executed
     
 ############################# HANDLER PART ##################################
 .data
@@ -110,21 +134,15 @@ rl_size: .word 0
 kernel_regs: .word 0:16
 .globl user_regs
 user_regs: .word 0:17
-# current process => $k0
-# limit of the ready and blocked processes list is 100
-p_lim: .word 100
-interrupt_prompt: .asciiz "Interrupt happened, in kernel...\n"
+# current process => $k1
+# interrupt disabled => $k0
 ############################################################################
 # void handle_interrupt()
 # _handle_interrupt
 # When an interrupt occurs, the os will execute this function.
-# STATE_NO's : RUNNING = 1, BLOCKED = 2, READY = 3, TERMINATED = 0
+# STATE_NO's : RUNNING = 1, BLOCKED = 2, READY = 3, TERMINATED = 4
 # k0 -> interrupt enable bit
 # k1 -> current pid
-# s0 -> size of blocked process list
-# s1 -> size of ready process list
-# s2 -> limit of active processes
-# s3 -> user PC
 ############################################################################
 .text
 .globl _handle_interrupt
@@ -134,11 +152,7 @@ _handle_interrupt:
     
     ori $k0,,$0,1 # disable interrupts
 
-    # print to inform 
-    # print(interrupt_prompt)
-    li $v0,4
-    la $a0,interrupt_prompt
-    syscall
+
     # Do a context switch if the ready queue is not empty.
     # if(0 != ready_queue_size) branch;
     lw $s1,rl_size
@@ -158,12 +172,6 @@ ready_queue_not_empty_return:
 ready_queue_not_empty:
     # save the $tx registers
     jal save_routine
-
-    #here do a debug
-    la $a0,debug4
-    li $v0,4
-    syscall
-
     # pop the front of the queue and add the current process to the end of the queue
     # put the ready process list as argument
     la $a0,ready_processes
@@ -222,12 +230,6 @@ ready_queue_not_empty:
     # restore the t registers
     jal restore_routine
     
-
-    #here do a debug
-    la $a0,debug4
-    li $v0,4
-    syscall
-
     # return to the branch end
     j ready_queue_not_empty_return
 

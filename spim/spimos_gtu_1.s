@@ -1,19 +1,13 @@
 .data
-filename: .asciiz "Collatz.asm"
-filename2: .asciiz "BinarySearch.asm"
-filename3: .asciiz "LinearSearch.asm"
-prompt: .asciiz "\nExitting Kernel...\n"
-debug1: .asciiz "\here before sw\n"
-debug2: .asciiz "In Parent\n"
-debug3: .asciiz "In Child\n"
-debug4: .asciiz "In CS part\n"
-debug5: .asciiz "IN child 1\n"
-debug6: .asciiz "IN child 2\n"
-debug7: .asciiz "IN child 3\n"
-debug8: .asciiz "IN child 4\n"
+# File names of the programs to load
+filename: .asciiz "LinearSearch.s"
+filename2: .asciiz "BinarySearch.s"
+filename3: .asciiz "Collatz.s"
+filename4: .asciiz "Palindrome.s"
+# Kernel Prompt Message
+prompt: .asciiz "Exitting Kernel...\n"
 .text
 .globl main
-
 main:
 ############################################################################
 # void init()
@@ -21,25 +15,18 @@ main:
 # calls the syscalls to initialize the processes.
 ############################################################################
 init:    
-    # Even though k0 is initially 0 it is set again
-    # Disabling interrupts
-    ori $k0,$0,0
+    
     # Calling init structure func
     jal _init_process_structure
-    
-    # Enabling interrupts
-    ori $k0,$0,1
-    
+        
     # a variable to be used on the final loop
     # t0 = -1
     li $t0,-1
 
     # fork is a critical region disable interrupts
-    ori $k0,$0,0 # interrupts disabled
     # fork() 
     li $v0,18
     syscall
-    ori $k0,$0,1 # interrupts enabled
 
     # If this is the child process branch
     
@@ -47,22 +34,28 @@ init:
     beq $v0,$0,if_child
     # comes here after the if branch
 
-    ori $k0,$0,0 # interrupts disabled
     # fork()
     li $v0,18
     syscall
-    ori $k0,$0,1 # interrupts enabled    
+
     # if(child) {branch();}
     beq $v0,$0,if_child2
     # comes here after the if branch
 
-    ori $k0,$0,0 # interrupts disabled
     # fork()
     li $v0,18
     syscall
-    ori $k0,$0,1 # interrupts enabled    
+
     # if(child) {branch();}
     beq $v0,$0,if_child3
+    # comes here after the if branch
+    
+    # fork()
+    li $v0,18
+    syscall
+
+    # if(child) {branch();}
+    beq $v0,$0,if_child4
     # comes here after the if branch
 
 l1:
@@ -119,7 +112,16 @@ if_child3:
     la $a0,filename3
     syscall
     # if exev is successful this part wont be executed 
-
+    
+if_child4:
+    # The process here is a child
+    # Now call execv to load the new process
+    # execv(filename)
+    la $v0,19
+    la $a0,filename4
+    syscall
+    # if exev is successful this part wont be executed 
+    
 ############################# HANDLER PART ##################################
 .data
 # There can be at most process 100 process created in this OS
@@ -132,26 +134,24 @@ blocked_processes: .word 0:100
 .globl process_states
 process_states: .word 0:100
 # kernel registers and the
-# k0 for interrupt enable
-# k1 for user PC
+.globl bl_size
+bl_size: .word 0
+.globl rl_size
+rl_size: .word 0
+
 .globl kernel_regs
 kernel_regs: .word 0:16
+.globl user_regs
 user_regs: .word 0:17
-# current process => $k0
-# limit of the ready and blocked processes list is 100
-p_lim: .word 100
-interrupt_prompt: .asciiz "Interrupt happened, in kernel...\n"
+# current process => $k1
+# interrupt disabled => $k0
 ############################################################################
 # void handle_interrupt()
 # _handle_interrupt
 # When an interrupt occurs, the os will execute this function.
-# STATE_NO's : RUNNING = 1, BLOCKED = 2, READY = 3, TERMINATED = 0
+# STATE_NO's : RUNNING = 1, BLOCKED = 2, READY = 3, TERMINATED = 4
 # k0 -> interrupt enable bit
 # k1 -> current pid
-# s0 -> size of blocked process list
-# s1 -> size of ready process list
-# s2 -> limit of active processes
-# s3 -> user PC
 ############################################################################
 .text
 .globl _handle_interrupt
@@ -159,107 +159,20 @@ _handle_interrupt:
 
     # Load the registers for kernel and PC
     
-    # SAVE USER REGISTERS
-    # first the arguments
-    sw $a0,user_regs # a0,a1,a2,a3 being stored
-    sw $a1,user_regs+4
-    sw $a2,user_regs+8
-    sw $a3,user_regs+12
-    # Then the return registers
-    sw $v0,user_regs+16
-    sw $v1,user_regs+20
-    # Temporary registers
-    sw $t0,user_regs+24 # user_regs[6]=$t0
-    sw $t1,user_regs+28 # user_regs[7]=$t1
-    sw $t2,user_regs+32 # user_regs[8]=$t2
-    sw $t3,user_regs+36 # user_regs[9]=$t3
-    sw $t4,user_regs+40 # user_regs[10]=$t4
-    sw $t5,user_regs+44 # user_regs[11]=$t5
-    sw $t6,user_regs+48 # user_regs[12]=$t6
-    sw $t7,user_regs+52 # user_regs[13]=$t7
-    sw $t8,user_regs+56 # user_regs[14]=$t8
-    sw $t9,user_regs+60 # user_regs[15]=$t9
-    # RESTORE THE KERNEL REGISTERS
-    # first the arguments
-    lw $a0,kernel_regs # a0,a1,a2,a3 being restored
-    lw $a1,kernel_regs+4
-    lw $a2,kernel_regs+8
-    lw $a3,kernel_regs+12
-    # Then the return registers
-    lw $v0,kernel_regs+16
-    lw $v1,kernel_regs+20
-    # Temporary registers
-    lw $t0,kernel_regs+24 # $t0 = kernel_regs[6]
-    lw $t1,kernel_regs+28 # $t1 = kernel_regs[7]
-    lw $t2,kernel_regs+32 # $t2 = kernel_regs[8]
-    lw $t3,kernel_regs+36 # $t3 = kernel_regs[9]
-    lw $t4,kernel_regs+40 # $t4 = kernel_regs[10]
-    lw $t5,kernel_regs+44 # $t5 = kernel_regs[11]
-    lw $t6,kernel_regs+48 # $t6 = kernel_regs[12]
-    lw $t7,kernel_regs+52 # $t7 = kernel_regs[13]
-    lw $t8,kernel_regs+56 # $t8 = kernel_regs[14]
-    lw $t9,kernel_regs+60 # $t9 = kernel_regs[15]
-    #lw $ra,kernel_regs+64 # $ra = kernel_regs[16]
+    ori $k0,$0,1 # disable interrupts
 
 
-    # print to inform 
-    # print(interrupt_prompt)
-    li $v0,4
-    la $a0,interrupt_prompt
-    syscall
     # Do a context switch if the ready queue is not empty.
     # if(0 != ready_queue_size) branch;
+    lw $s1,rl_size
     bne $0,$s1,ready_queue_not_empty
     # Label to return after branch
 ready_queue_not_empty_return:
     
-    # SAVE KERNEL REGISTERS
-    # first the arguments
-    sw $a0,kernel_regs # a0,a1,a2,a3 being stored
-    sw $a1,kernel_regs+4
-    sw $a2,kernel_regs+8
-    sw $a3,kernel_regs+12
-    # Then the return registers
-    sw $v0,kernel_regs+16
-    sw $v1,kernel_regs+20
-    # Temporary registers
-    sw $t0,kernel_regs+24 # kernel_regs[6]=$t0
-    sw $t1,kernel_regs+28 # kernel_regs[7]=$t1
-    sw $t2,kernel_regs+32 # kernel_regs[8]=$t2
-    sw $t3,kernel_regs+36 # kernel_regs[9]=$t3
-    sw $t4,kernel_regs+40 # kernel_regs[10]=$t4
-    sw $t5,kernel_regs+44 # kernel_regs[11]=$t5
-    sw $t6,kernel_regs+48 # kernel_regs[12]=$t6
-    sw $t7,kernel_regs+52 # kernel_regs[13]=$t7
-    sw $t8,kernel_regs+56 # kernel_regs[14]=$t8
-    sw $t9,kernel_regs+60 # kernel_regs[15]=$t9
-    #sw $ra,kernel_regs+64 # kernel_regs[16]=$ra
-
-    # RESTORE THE USER REGISTERS
-    # first the arguments
-    lw $a0,user_regs # a0,a1,a2,a3 being restored
-    lw $a1,user_regs+4
-    lw $a2,user_regs+8
-    lw $a3,user_regs+12
-    # Then the return registers
-    lw $v0,user_regs+16
-    lw $v1,user_regs+20
-    # Temporary registers
-    lw $t0,user_regs+24 # $t0 = user_regs[6]
-    lw $t1,user_regs+28 # $t1 = user_regs[7]
-    lw $t2,user_regs+32 # $t2 = user_regs[8]
-    lw $t3,user_regs+36 # $t3 = user_regs[9]
-    lw $t4,user_regs+40 # $t4 = user_regs[10]
-    lw $t5,user_regs+44 # $t5 = user_regs[11]
-    lw $t6,user_regs+48 # $t6 = user_regs[12]
-    lw $t7,user_regs+52 # $t7 = user_regs[13]
-    lw $t8,user_regs+56 # $t8 = user_regs[14]
-    lw $t9,user_regs+60 # $t9 = user_regs[15]
-    
-    # Load the process id in $k0
+    # Load the process id in $k1
     la $v0,25
+    # load_process($k1) syscall
     la $a0,0($k1)
-    # load_process($k0) syscall
     # will also enable interrupts
     syscall
     # end of execution
@@ -268,16 +181,11 @@ ready_queue_not_empty_return:
 ready_queue_not_empty:
     # save the $tx registers
     jal save_routine
-
-    #here do a debug
-    la $a0,debug4
-    li $v0,4
-    syscall
-
     # pop the front of the queue and add the current process to the end of the queue
     # put the ready process list as argument
     la $a0,ready_processes
     # put the size of the queue
+    lw $s1,rl_size
     la $a1,0($s1)
     jal pop_front
     # decrement the size of the queue after calling pop_front
@@ -316,35 +224,21 @@ ready_queue_not_empty:
     # t2 = RUNNING
     li $t2,1
     # status_arr[k0] = RUNNING
-    lw $t2,0($t1)
+    sw $t2,0($t1)
 
     #t2 = READY
     li $t2,3
     #t1 = 4*t3 (old process)
     sll $t1,$t3,2    
     #t1 += status_arr
+    la $t4,process_states
     add $t1,$t1,$t4
     # status_arr[t3] = READY
-    lw $t2,0($t1)
+    sw $t2,0($t1)
 
     # restore the t registers
     jal restore_routine
-
-    # store the init process except the PC and $ra
-    li $a0,0
-    li $a1,2
-    # Mode to save init without PC
-    li $v0,24
-    # store_process(0,2) syscall
-    syscall
-
     
-
-    #here do a debug
-    la $a0,debug4
-    li $v0,4
-    syscall
-
     # return to the branch end
     j ready_queue_not_empty_return
 
@@ -414,7 +308,7 @@ pop_loop_end:
     lw $ra, 0($sp)
     addi $sp, $sp,4
     # return to the caller
-    j $ra
+    jr $ra
 ######################## pop_front end ####################################    
 
 
@@ -472,8 +366,8 @@ save_routine:
     sw $t6, 24($sp) 
     # sp[7] = t7
     sw $t7, 28($sp)
-        
-    jal $ra
+    
+    jr $ra
 
 # This is a routine for loading the
 # current registers with the stack
@@ -506,105 +400,22 @@ restore_routine:
 # void init_process_structure()
 # _init_process_structure
 # The process lists will be initialized here. 
-# $ra will not be saved
 # STATE_NO's : RUNNING = 1, BLOCKED = 2, READY = 3, TERMINATED = 0
-# k0 -> interrupt enable bit
 # k1 -> current pid
-# s0 -> size of blocked process list
-# s1 -> size of ready process list
-# s2 -> limit of active processes
-# s3 -> user PC
 ############################################################################
 _init_process_structure:
-    # Disabling interrupts
-    # k0 will be used for interrupt handling mask
-    
-    # This is the init process for the kernel.
-    # First the process structures should be initialized.
-    # init_process_structure() syscall
-    
-    # switch to kernel mode
-    # SAVE USER REGISTERS
-    # first the arguments
-    sw $a0,user_regs # a0,a1,a2,a3 being stored
-    sw $a1,user_regs+4
-    sw $a2,user_regs+8
-    sw $a3,user_regs+12
-    # Then the return registers
-    sw $v0,user_regs+16
-    sw $v1,user_regs+20
-    # Temporary registers
-    sw $t0,user_regs+24 # user_regs[6]=$t0
-    sw $t1,user_regs+28 # user_regs[7]=$t1
-    sw $t2,user_regs+32 # user_regs[8]=$t2
-    sw $t3,user_regs+36 # user_regs[9]=$t3
-    sw $t4,user_regs+40 # user_regs[10]=$t4
-    sw $t5,user_regs+44 # user_regs[11]=$t5
-    sw $t6,user_regs+48 # user_regs[12]=$t6
-    sw $t7,user_regs+52 # user_regs[13]=$t7
-    sw $t8,user_regs+56 # user_regs[14]=$t8
-    sw $t9,user_regs+60 # user_regs[15]=$t9
 
     li $v0,23
     syscall
     # will register this process as the init process.
-    li $k0,0
     # set k1 as current process
     li $k1,0
-    # setting the sizes of the process lists
-    # $s0 = size of the ready process list
-    li $s0,0
-    # $s1 = size of the blocked process list
-    li $s1,0
-    # set limit of active processes
-    lw $s2,p_lim
+    
+   
     # temp $t7 = RUNNING state
     li $t7,1
     # process_states[0] = $t7 (RUNNING STATE)
     sw $t7,process_states
 
-    # Save these registers for the kernel mode
-    # SAVE KERNEL REGISTERS
-    # first the arguments
-    sw $a0,kernel_regs # a0,a1,a2,a3 being stored
-    sw $a1,kernel_regs+4
-    sw $a2,kernel_regs+8
-    sw $a3,kernel_regs+12
-    # Then the return registers
-    sw $v0,kernel_regs+16
-    sw $v1,kernel_regs+20
-    # Temporary registers
-    sw $t0,kernel_regs+24 # kernel_regs[6]=$t0
-    sw $t1,kernel_regs+28 # kernel_regs[7]=$t1
-    sw $t2,kernel_regs+32 # kernel_regs[8]=$t2
-    sw $t3,kernel_regs+36 # kernel_regs[9]=$t3
-    sw $t4,kernel_regs+40 # kernel_regs[10]=$t4
-    sw $t5,kernel_regs+44 # kernel_regs[11]=$t5
-    sw $t6,kernel_regs+48 # kernel_regs[12]=$t6
-    sw $t7,kernel_regs+52 # kernel_regs[13]=$t7
-    sw $t8,kernel_regs+56 # kernel_regs[14]=$t8
-    sw $t9,kernel_regs+60 # kernel_regs[15]=$t9
-
-    # RESTORE THE USER REGISTERS
-    # first the arguments
-    lw $a0,user_regs # a0,a1,a2,a3 being restored
-    lw $a1,user_regs+4
-    lw $a2,user_regs+8
-    lw $a3,user_regs+12
-    # Then the return registers
-    lw $v0,user_regs+16
-    lw $v1,user_regs+20
-    # Temporary registers
-    lw $t0,user_regs+24 # $t0 = user_regs[6]
-    lw $t1,user_regs+28 # $t1 = user_regs[7]
-    lw $t2,user_regs+32 # $t2 = user_regs[8]
-    lw $t3,user_regs+36 # $t3 = user_regs[9]
-    lw $t4,user_regs+40 # $t4 = user_regs[10]
-    lw $t5,user_regs+44 # $t5 = user_regs[11]
-    lw $t6,user_regs+48 # $t6 = user_regs[12]
-    lw $t7,user_regs+52 # $t7 = user_regs[13]
-    lw $t8,user_regs+56 # $t8 = user_regs[14]
-    lw $t9,user_regs+60 # $t9 = user_regs[15]
-    # return to the caller
     jr $ra
 ########################## _init_process_structure end #####################

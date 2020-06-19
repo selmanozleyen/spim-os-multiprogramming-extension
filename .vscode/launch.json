@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/spim/spim",
-            "args": ["-file","${workspaceFolder}/spim/spimos_gtu_2.s"],
+            "args": ["-file","${workspaceFolder}/spim/spimos_gtu_1.s"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/spim",
             "environment": [],

@@ -87,6 +87,9 @@ void my_set_mem_word(mem_addr addr, reg_word value, process * p);
 reg_word my_read_mem_word(mem_addr addr,process * p);
 void process_exit();
 void init_kernel();
+void process_print_string(char * mes);
+void process_print_int(int mes);
+void palindrome_print(int no, char * word, char * res);
 
 #define PRINT_ON_SWITCH 0
 #define PROCESS_COUNT 100
@@ -120,8 +123,11 @@ void init_kernel();
 #define RANDOM_INT_SYSCALL     21
 #define PROCESS_EXIT_SYSCALL     22
 #define INIT_PROCESS_STRUCTURE  23
-#define PRINT_PT_SYSCALL	24
+#define PRINT_PT_SYSCALL 24
 #define LOAD_NEXT_PROCESS_SYSCALL 25
+#define PROCESS_PRINT_INT 26
+#define PROCESS_PRINT_STRING 27
+#define PROCESS_PALINDROME_PRINT 28
 
 #define HW5_INT_ENABLE 0x8000
 

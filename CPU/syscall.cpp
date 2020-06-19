@@ -58,6 +58,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "data.h"
+#include <string>
 
 using namespace std;
 
@@ -132,6 +133,7 @@ char * blocked_processes_lname = "blocked_processes";
 char * process_states_lname = "process_states";
 char * bl_size_lname = "bl_size";
 char * rl_size_lname = "rl_size";
+char * state_names[] = {"CORRUPTION","RUNNING","BLOCKED","READY","TERMINATED"};
 /* pointers to the data segment of assembly file */
 int ready_processes_ptr = 0;
 int blocked_processes_ptr = 0;
@@ -140,64 +142,34 @@ int handler_ptr = 0;
 int bl_size_ptr = 0;
 int rl_size_ptr = 0;
 
-/*You implement your handler here*/
 void SPIM_timerHandler()
 { 
-  printf("Cur Pid : %d\n",R[K1_REG]);
-  int size_rl = my_read_mem_word(rl_size_ptr,init_process);
-  for (int i = 0; i < size_rl; i++)
-  {
-    printf("Rp[%d]=%d\n",i,my_read_mem_word(
-      ready_processes_ptr + i*BYTES_PER_WORD,
-      init_process
-    ));
-  }
-  int size_bl = my_read_mem_word(bl_size_ptr,init_process);
-  for (int i = 0; i < size_bl; i++)
-  {
-    printf("Bp[%d]=%d\n",i,my_read_mem_word(
-      blocked_processes_ptr + i*BYTES_PER_WORD,
-      init_process
-    ));
-  }
-  for (int i = 0; i < next_pid; i++)
-  {
-    printf("Status[%d]=%d\n",i,my_read_mem_word(
-      process_state_ptr + i*BYTES_PER_WORD,
-      init_process
-    ));
-  }
   // interrupts are disabled when the current process running is init process
   int init_status = my_read_mem_word(process_state_ptr,init_process);
-  fprintf(stdout,"Here in handler.\n");
-  fflush(stdout);
-  if(init_status>=4 || init_status < 0){
-    perror("Block queue in assembly file is corrupted.");
-    _exit(-1);
-  }
+
   if(R[K0_REG]==0 && init_status == BLOCKED && init_process != NULL){
-    // Save the proccess with the state before interrupt
+    // Report user
+    printf("Kernel: Interrupt happened executing handler.\n");
+    // Get current process id
     int cur_pid = R[K1_REG];
+    // Save the proccess with its current state before interrupt handling
     processes[cur_pid]->store_process();
     init_process->load_process();
     PC = handler_ptr;
-    fprintf(stdout,"Have set the interrupt PC.\n");
-    fflush(stdout);
   } 
 }
 
-
+//  SYSCALL FUNCION that loads the next selected pid by the assembly file
 void kernel_load_next_process(int pid){
-  //first store the current state of the kernel only the data segment
-
   // store the previous values
-  
   R[K1_REG] = pid; 
   R[K0_REG] = 0;
   processes[pid]->load_process();
   processes[pid]->_PC -= BYTES_PER_WORD;
   // after syscall is over pc will be incremented to equalize this PC is decremented
   PC -= BYTES_PER_WORD;
+  // after context switch print the table
+  print_table();
 }
 
 /* Decides which syscall to execute or simulate.  Returns zero upon
@@ -217,6 +189,18 @@ do_syscall ()
 
   switch (R[REG_V0])
     {
+    // Provides Atomic Formatted Printing For pretty and testable results
+    case PROCESS_PALINDROME_PRINT:
+      palindrome_print(R[REG_A0],
+      (char *)mem_reference(R[REG_A1]),
+      (char *)mem_reference(R[REG_A2]));
+      return 1;
+    case PROCESS_PRINT_INT:
+      process_print_int(R[REG_A0]);
+      return 1;
+    case PROCESS_PRINT_STRING:
+      process_print_string((char *)mem_reference(R[REG_A0]));
+      return 1;
     // This syscall will store the current registers and data segments
     // to the given process
     case LOAD_NEXT_PROCESS_SYSCALL:
@@ -235,7 +219,6 @@ do_syscall ()
       process_exit();
       return (1);
     case RANDOM_INT_SYSCALL:
-      srand(time(NULL));
       if(R[REG_A0]<0)
         perror("Invalid upper bound");
       R[REG_V0] = rand()%R[REG_A0];
@@ -249,8 +232,6 @@ do_syscall ()
       return (1);
       break;
     case FORK_SYSCALL:
-      fprintf (stdout,"in fork\n");
-      fflush(stdout);
       spim_fork();
       return (1);
       break;
@@ -471,16 +452,9 @@ handle_exception ()
     }
 }
 
+// empties currently allocated globals by the process
 void empty_curr(){
-  int instruction_count = (text_top - TEXT_BOT )>> 2;
-  for (int i = 0; i < instruction_count; i++){
-    if(text_seg[i])
-      free_inst(text_seg[i]);
-  }
-  instruction_count = (k_text_top - K_TEXT_BOT)>> 2;
-  for (int i = 0; i < instruction_count; i++)
-    if(k_text_seg[i])
-      free_inst(k_text_seg[i]);
+  // frees them before emptying
   free(data_seg);
   free(text_seg);
   free(k_data_seg);
@@ -535,7 +509,8 @@ void spim_fork(){
   // if this is the kernel process then it must be loaded again to update values
   if(cur_process == init_process)
     init_process->load_process();
-    
+  // Report to the terminal that fork is over
+  printf("Kernel: Fork syscall is done.\n");
 }
 
 // Will create a new memory segments and load the process there
@@ -563,7 +538,6 @@ void spim_execv(char * path){
 	       initial_k_text_size,
 	       initial_k_data_size, initial_k_data_limit);
   initialize_registers ();
-  initialize_inst_tables ();
   initialize_symbol_table ();
   k_text_begins_at_point (K_TEXT_BOT);
   k_data_begins_at_point (K_DATA_BOT);
@@ -580,6 +554,9 @@ void spim_execv(char * path){
   PC = find_symbol_address("main")-BYTES_PER_WORD;
   // store it in the procces contents
   cur_process->store_process();
+  free(p);
+  // Report to the user
+  printf("Kernel: Execv syscall is done.\n");
 }
 
 // Returns the child status -1 if there is none
@@ -645,21 +622,48 @@ void spim_wait(){
     cur_process->_PC-= BYTES_PER_WORD;
     cur_process->load_process();
   }
+  print_table();
 }
 
-
+// function to print the table of processes in assembly file
 void print_table(){
-  // fprintf(stdout,"\n________________TABLE___________________\n");
-  // cur_process->store_process();
-  // print_process(cur_process);
-  // for (size_t i = 0; i < blocked_processes.size(); i++)
-  //   print_process(blocked_processes[i]);
-  // for (size_t i = 0; i < ready_processes.size(); i++)
-  //   print_process(ready_processes[i]);
-  // fprintf(stdout,"________________________________________\n");
-  // fflush(stdout);
+  
+  /* Getting proccess table from assembly part and storing it */
+  int allocated_pids = next_pid;
+  /* Allocate for lists */
+  int * state_l = (int *) malloc(sizeof(int)*allocated_pids);
+  /* Set the state list from assembly data segment */
+  for (int i = 0; i < allocated_pids; i++)
+  {
+    state_l[i] = my_read_mem_word(
+    process_state_ptr+i*BYTES_PER_WORD,
+    init_process);
+  }
+  printf("Kernel: Context switch happened here is the process table.\n");
+  printf("pid%*sstate%*sname%*sPC%*sstack_pointer\n",19,"",17,"",18,"",20,"");
+  for (int i = 0; i < allocated_pids; i++)
+  {
+    if(state_l[i] == TERMINATED){
+      printf("%-20d  %-20s  %-20s  %-20d  %-20d\n",i,
+        state_names[TERMINATED],
+        state_names[TERMINATED],
+        -1,-1
+      );
+    }
+    else{
+      printf("%-20d  %-20s  %-20s  %-20d  %-20p\n",i,
+        state_names[state_l[i]],
+        processes[i]->_process_name.data(),
+        processes[i]->_PC,(void *)processes[i]->_stack_seg
+      );
+    }
+  }
+  fflush(stdout);
+  // free allocated array
+  free(state_l);
 }
 
+// free the resources allocated by the process
 void free_process(process * p){
   int instruction_count = (p->_text_top - TEXT_BOT )>> 2;
   for (int i = 0; i < instruction_count; i++){
@@ -672,24 +676,7 @@ void free_process(process * p){
   free(p);
 }
 
-
-void print_process(process * p){
-  
-  printf("\n");
-  printf("Pid:%d\nProcess Name:%s\nPC:%d\nStack Pointer Adrress:%p\n",
-  p->_pid,p->_process_name.data(),p->_PC,(void *)p->_stack_seg);
-  if(p->_pstate == RUNNING)
-    printf("State: Running\n");
-  if(p->_pstate == READY)
-    printf("State: Ready\n");
-  if(p->_pstate == BLOCKED)
-    printf("State: Waiting\n");
-  if(p->_pstate == TERMINATED)
-    printf("State: Terminated\n");
-  
-}
-
-
+// modified function to set the word in a desired process
 void my_set_mem_word(mem_addr addr, reg_word value, process * p)
 {
   if ((addr >= DATA_BOT) && (addr < data_top) && !(addr & 0x3))
@@ -702,7 +689,7 @@ void my_set_mem_word(mem_addr addr, reg_word value, process * p)
   }
 }
 
-
+// modified function to get the word in a desired process
 reg_word my_read_mem_word(mem_addr addr,process * p)
 {
   if ((addr >= DATA_BOT) && (addr < data_top) && !(addr & 0x3))
@@ -724,7 +711,7 @@ void process_exit()
   oldp->store_process();
   // if it is the init process then close the kernel
   if(oldp->_pid == 0){
-    
+    _exit(0);
   }
   // get the size of the blocked queue
   int size_bl = my_read_mem_word(bl_size_ptr,init_process);
@@ -735,9 +722,8 @@ void process_exit()
   int parent_status = my_read_mem_word(process_state_ptr+parent_pid*BYTES_PER_WORD,
   init_process); 
   
-  // TODO free the process
   // set the current pid status to terminated
-  my_set_mem_word(process_state_ptr + oldp->_pid*BYTES_PER_WORD,
+  my_set_mem_word(process_state_ptr + old_pid*BYTES_PER_WORD,
   TERMINATED,init_process);
   free_process(oldp);
 
@@ -805,7 +791,7 @@ void process_exit()
       int size_rl = my_read_mem_word(rl_size_ptr,init_process);
       // if there are none give an error
       if(size_rl <= 0){
-        printf("There are no other processes that can run.\n");
+        fprintf(stderr,"There are no other processes that can run.\n");
         _exit(1);
       }
       // get from the front of the queue
@@ -835,24 +821,30 @@ void process_exit()
       cur_process->_PC-= BYTES_PER_WORD;
       cur_process->load_process();
     }
+    /* Set the table to NULL after freeing and comparing the address of oldp */
+    processes[old_pid] = NULL;
+    oldp = NULL;
+    printf("Kernel: Exit process syscall is done process no %d exited\n",old_pid);
+    print_table();
 }
 
 // Initializes some memory part for the kernel to work properly
 // Will be called in the start of the kernel
 void init_kernel(){
+  srand(time(NULL)); // seed for the rand syscall
   // create the process struct
-      init_process = new process("init");
-      processes[0] = init_process;
-      // Set parent to NULL since it has no parent
-      init_process->_parent = NULL;
-      // this will be the init process.
-      // setting the address of the assembly file
-      ready_processes_ptr = lookup_label(ready_processes_lname)->addr;
-      blocked_processes_ptr = lookup_label(blocked_processes_lname)->addr;
-      process_state_ptr = lookup_label(process_states_lname)->addr;
-      handler_ptr = lookup_label(timer_interrupt_handler_name)->addr;
-      bl_size_ptr = lookup_label(bl_size_lname)->addr;
-      rl_size_ptr = lookup_label(rl_size_lname)->addr;
+  init_process = new process("init");
+  processes[0] = init_process;
+  // Set parent to NULL since it has no parent
+  init_process->_parent = NULL;
+  // this will be the init process.
+  // setting the address of the assembly file
+  ready_processes_ptr = lookup_label(ready_processes_lname)->addr;
+  blocked_processes_ptr = lookup_label(blocked_processes_lname)->addr;
+  process_state_ptr = lookup_label(process_states_lname)->addr;
+  handler_ptr = lookup_label(timer_interrupt_handler_name)->addr;
+  bl_size_ptr = lookup_label(bl_size_lname)->addr;
+  rl_size_ptr = lookup_label(rl_size_lname)->addr;
 }
 
 imm_expr * my_copy_imm_expr (imm_expr *old_expr)
@@ -993,4 +985,31 @@ void process::load_process(){
   text_modified = _text_modified;
   data_modified = _data_modified;
 
+}
+
+// special syscall for the processes to print string this way they will be printing the pid too
+void process_print_string(char * mes){
+  if(mes == NULL){
+    perror("Syscall input error");
+    _exit(-1);
+  }
+  int cur_pid = R[K1_REG];
+  int size = strlen(mes);
+  // if there is newline at the end remove it because this function is going to print it
+  if(mes[size-1] == '\n')
+    mes[size-1] = 0;
+  printf("Process[id = %d, name = %s]: %s\n",cur_pid,processes[cur_pid]->_process_name.data(),mes);
+}
+
+// special syscall for the processes to print int this way they will be printing the pid too
+void process_print_int(int mes){
+  int cur_pid = R[K1_REG];
+  printf("Process[id = %d, name = %s]: %d\n",cur_pid,processes[cur_pid]->_process_name.data(),mes);
+}
+
+// Provides Atomic Printing For Palindrom File
+void palindrome_print(int no, char * word, char * res){
+  int cur_pid = R[K1_REG];
+  printf("Process[id = %d, name = %s]: %d : %s : %s\n",cur_pid,processes[cur_pid]->_process_name.data(),
+  no,word,res);
 }
