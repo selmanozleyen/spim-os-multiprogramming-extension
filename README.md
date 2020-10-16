@@ -39,4 +39,4 @@ not, then you ask for the user continue or not, if yes, take an input word and s
 is a palindrome by printing the “string” semicolon: “Palindrome” or “Not Palindrome”. Otherwise terminate the program.
 
 # Output Example
-![out](/media/1.jpg)
+![out](https://github.com/SelmanOzleyen/spim-multiprogramming-mod/blob/master/media/1.PNG)
