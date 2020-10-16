@@ -38,3 +38,5 @@ whether they are palindrome or not respectively. When you assign all the words i
 not, then you ask for the user continue or not, if yes, take an input word and show whether a string given from keyboard
 is a palindrome by printing the “string” semicolon: “Palindrome” or “Not Palindrome”. Otherwise terminate the program.
 
+# Output Example
+![out](/media/1.jpg)
