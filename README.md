@@ -27,11 +27,14 @@ processes), start them and will enter an infinite loop until all the processes t
 infinite loop until all the processes terminate.
 
 # Test programs
--BinarySearch.s
--LinearSearch.s
+-BinarySearch.s   
+
+-LinearSearch.s   
+
 -Collatz.s: You are going to find collatz sequence for each number less than 25. You should do this starting from 25 to 1
 iteratively (Not only for 1 number). You can find information about (Collatz conjecture on internet). For each number
-you will show the number being interested in, and its collatz sequence and go to next number.
+you will show the number being interested in, and its collatz sequence and go to next number.   
+
 -Palindrome.s: Create a dictionary that contains 100 words, where 90 of the words are not palindrome, 10 of them are
 palindrome. You do not have to create the dictionary by taking from the user. Then, you will print out each word and
 whether they are palindrome or not respectively. When you assign all the words in the dictionary whether palindrome or
