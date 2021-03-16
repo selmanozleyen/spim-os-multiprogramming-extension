@@ -1,5 +1,5 @@
 # Introduction
-This is a modification of SPIM. Original source code can be found [here](https://sourceforge.net/projects/spimsimulator/). Original spim is designed to execute only one process but by adding syscalls like execv, fork, wait and some other helper syscalls I was able to modify it to a multi-process OS with multitasking. There are also interrupts periodically to call the *interrupt function* which is written in assebly. Interrupt handler makes context switches with *round robin scheduling*.
+This is a modification of SPIM. Original source code can be found [here](https://sourceforge.net/projects/spimsimulator/). Original spim is designed to execute only one process but by adding syscalls like execv, fork, wait and some other helper syscalls I was able to modify it to a multi-process OS with multitasking. There are also interrupts periodically to call the *interrupt function* which is written in assembly. Interrupt handler makes context switches with *round robin scheduling*.
 
 # Running
 To install spim enter the following;
